@@ -6,11 +6,9 @@ function ContactSection() {
 
   // Options for the service dropdown
   const serviceOptions = [
-    { value: "business-formation", label: "Pendirian Perusahaan" },
-    { value: "visa-services", label: "Jasa Visa" },
-    { value: "legal-consultation", label: "Konsultasi Hukum" },
-    { value: "business-licenses", label: "Perizinan Bisnis" },
-    { value: "tax-services", label: "Jasa Perpajakan" },
+    { value: "service1", label: "Service 1" },
+    { value: "service2", label: "Service 2" },
+    { value: "service3", label: "Service 3" },
   ];
 
   // Custom styles for react-select
