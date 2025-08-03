@@ -4,6 +4,7 @@ import ReviewsSection from "../components/ReviewsSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import ServicesSection from "../components/ServicesSection";
+import FaqSection from "../components/FaqSection";
 
 function HomePage() {
   return (
@@ -12,6 +13,7 @@ function HomePage() {
         <HeroSection />
         <FeatureSection />
         <ServicesSection />
+        <FaqSection />
         <ReviewsSection />
         <ContactSection />
         <Footer />

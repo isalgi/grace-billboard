@@ -10,14 +10,18 @@ export default function HeroSection() {
       }}
     >
       {/* Navigation */}
-      <nav className="relative z-10 flex items-center justify-between p-6">
-        <div className="flex items-center space-x-2">
-          <div className="w-10 h-10 flex items-center justify-center">
+      <nav className="relative z-10 flex items-center justify-between px-12 py-6">
+        <div className="flex items-center space-x-1">
+          <div className="w-11 h-11 flex items-center justify-center">
             <img src="./logo-billboard.png" alt="" />
           </div>
           <div>
-            <div className="text-[#0C098C] font-bold">Grace</div>
-            <div className="text-[#0C098C] font-bold">Billboard</div>
+            <div className="text-[#0C098C] font-[500] text-[20px] leading-[24px]">
+              Grace
+            </div>
+            <div className="text-[#0C098C] font-[500] text-[20px] leading-[24px]">
+              Billboard
+            </div>
           </div>
         </div>
 

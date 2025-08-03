@@ -5,7 +5,7 @@ function FaqSection() {
   // Set expandedQuestion to 0 (first question) by default
   const [expandedQuestion, setExpandedQuestion] = useState(0);
 
-  const tabs = ["Common", "Product", "Agreement", "Legality"];
+  const tabs = ["Common", "Product"];
 
   const questions = [
     {
@@ -54,7 +54,7 @@ function FaqSection() {
                 key={tab}
                 className={`text-base font-medium rounded-full py-3 px-6 transition-colors ${
                   activeTab === tab
-                    ? "bg-[#1196A9] text-white"
+                    ? "bg-[#0C098C] text-white"
                     : "bg-gray-300 text-gray-700 hover:bg-gray-400"
                 }`}
                 onClick={() => setActiveTab(tab)}

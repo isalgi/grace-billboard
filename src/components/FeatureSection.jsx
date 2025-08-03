@@ -1,10 +1,10 @@
 export default function FeaturesSection() {
   return (
-    <section className="py-16 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section className="pb-16 lg:pb-24 bg-white">
+      <div className="max-w-5xl mx-auto px-6 lg:px-12">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-[28px] font-medium text-[#1E1E1E] mb-4">
             Mengapa beriklan di GraceBillboard ?
           </h2>
         </div>
@@ -20,10 +20,10 @@ export default function FeaturesSection() {
                 className="w-28 h-28 lg:w-32 lg:h-32"
               />
             </div>
-            <h3 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
+            <h3 className="text-[24px] font-medium text-gray-800 mb-4">
               Beragam Jenis <br /> Media
             </h3>
-            <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
+            <p className="text-[#323232] font-medium text-[14px] leading-relaxed">
               Pilihan kategori media promosi <br /> indoor maupun outdoor
             </p>
           </div>
@@ -37,10 +37,10 @@ export default function FeaturesSection() {
                 className="w-28 h-28 lg:w-32 lg:h-32"
               />
             </div>
-            <h3 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
+            <h3 className="text-[24px] font-medium text-gray-800 mb-4">
               Harga Bisa <br /> disesuaikan
             </h3>
-            <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
+            <p className="text-[#323232] font-medium text-[14px] leading-relaxed">
               Harga Sewa Billboard Spesial Cukup <br /> ajukan penawaran <br />
               anda.
             </p>
@@ -55,10 +55,10 @@ export default function FeaturesSection() {
                 className="w-28 h-28 lg:w-32 lg:h-32"
               />
             </div>
-            <h3 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
+            <h3 className="text-[24px] font-medium text-gray-800 mb-4">
               Garansi pasti <br /> Tayang
             </h3>
-            <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
+            <p className="text-[#323232] font-medium text-[14px] leading-relaxed">
               Apabila tidak tayang jaminan <br /> uang kembali 100%.
             </p>
           </div>

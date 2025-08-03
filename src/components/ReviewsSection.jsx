@@ -24,9 +24,7 @@ function ReviewsSection() {
 
   return (
     <section className="px-0 py-10 bg-white ">
-      <h2 className="mb-10 text-3xl font-bold text-center text-cyan-600">
-        Our Reviews
-      </h2>
+      <h2 className="mb-10 text-3xl font-bold text-center">Our Reviews</h2>
       <div className="flex justify-between max-w-6xl mx-auto px-8 max-md:flex-col max-md:gap-10 max-md:items-center max-sm:px-5">
         {reviews.map((review, index) => (
           <ReviewCard

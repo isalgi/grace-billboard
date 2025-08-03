@@ -11,7 +11,7 @@ function ReviewCard({ name, company, review, index }) {
       } max-md:border-r-0 max-md:border-l-0 max-md:border-b max-md:border-gray-200 max-md:pb-10 max-md:last:border-b-0`}
     >
       <StarRating />
-      <h3 className="text-lg font-semibold text-cyan-600 mb-2">{name}</h3>
+      <h3 className="text-lg font-semibold text-[#0C098C] mb-2">{name}</h3>
       <div className="text-xl">{company}</div>
       <p className="text-sm leading-6 text-center text-gray-700 mt-4">
         {review}

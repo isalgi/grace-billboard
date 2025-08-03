@@ -6,7 +6,7 @@ function ServiceCard({ image, title, description }) {
         className="rounded-3xl h-[251px] w-[270px]"
         alt={title}
       />
-      <h3 className="text-xl font-semibold text-center text-cyan-600">
+      <h3 className="text-xl font-semibold text-center text-[#0C098C]">
         {title}
       </h3>
       <p className="text-base leading-5 text-black w-[260px]">{description}</p>

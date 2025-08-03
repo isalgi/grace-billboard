@@ -2,7 +2,6 @@ import { useState } from "react";
 import Select from "react-select";
 
 function ContactSection() {
-  const [startDate, setStartDate] = useState("");
   const [selectedService, setSelectedService] = useState(null);
 
   // Options for the service dropdown
@@ -75,12 +74,12 @@ function ContactSection() {
   return (
     <section className="py-16">
       <h2 className="text-3xl font-semibold text-center text-black mb-12">
-        Need a Help ?
+        Butuh Bantuan ?
       </h2>
       <div className="flex gap-12 px-16 pb-16 max-w-7xl mx-auto bg-white max-md:flex-col max-md:p-10 max-sm:p-5">
         <div className="flex flex-col gap-8 flex-1">
           <h2 className="text-7xl font-extrabold text-black max-sm:text-5xl">
-            Contact us
+            Hubungi Kami
           </h2>
           <p className="text-base text-black max-w-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
@@ -92,14 +91,6 @@ function ContactSection() {
             <FormField placeholder="Nama Belakang" required={true} />
             <FormField placeholder="Email" required={true} type="email" />
             <FormField placeholder="Nomor Telepon" required={true} type="tel" />
-
-            {/* Date Picker instead of dropdown */}
-            <DatePickerField
-              placeholder="Kapan Anda ingin memulai bisnis?"
-              required={true}
-              value={startDate}
-              onChange={setStartDate}
-            />
 
             {/* React Select component for services */}
             <div className="relative">
@@ -115,19 +106,12 @@ function ContactSection() {
                 required
               />
             </div>
-
-            {/* <button
-              type="submit"
-              className="mt-4 bg-cyan-600 text-white py-3 px-8 rounded-md font-medium self-start hover:bg-cyan-700 transition-colors"
-            >
-              Submit
-            </button> */}
           </form>
         </div>
         <div className="flex-1">
           <img
             src="./contact-grace.jpg"
-            className="w-full h-full object-cover max-h-[700px] pl-24"
+            className="w-full h-full object-cover max-h-[560px] pl-24"
             alt="Person's hand reaching out of the water"
           />
         </div>
