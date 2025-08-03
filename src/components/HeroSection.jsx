@@ -1,19 +1,20 @@
 export default function HeroSection() {
   return (
     <div
-      className="relative min-h-screen"
+      className="relative min-h-screen bg-gradient-to-br from-blue-600 to-blue-800"
       style={{
         backgroundImage: `url("./bg-billboard-top.jpg")`,
-        backgroundSize: "contain",
+        backgroundSize: "cover", // Changed from "contain" to "cover"
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "top",
+        backgroundPosition: "center top", // Better positioning
+        backgroundAttachment: "scroll", // Ensures consistent behavior
       }}
     >
       {/* Navigation */}
-      <nav className="relative z-10 flex items-center justify-between px-12 py-6">
+      <nav className="relative z-20 flex items-center justify-between px-12 py-6">
         <div className="flex items-center space-x-1">
           <div className="w-11 h-11 flex items-center justify-center">
-            <img src="./logo-billboard.png" alt="" />
+            <img src="./logo-billboard.png" alt="Grace Billboard Logo" />
           </div>
           <div>
             <div className="text-[#0C098C] font-[500] text-[20px] leading-[24px]">
@@ -95,15 +96,15 @@ export default function HeroSection() {
       </nav>
 
       {/* Hero Content */}
-      <div className="relative z-10 px-6 lg:px-12 pt-16 lg:pt-24">
+      <div className="relative z-20 px-6 lg:px-12 pt-16 lg:pt-24">
         <div className="max-w-3xl lg:max-w-4xl">
-          <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
             Selamat Datang di Grace <br /> Billboard
           </h1>
-          <p className="text-xl lg:text-2xl text-white mb-8 font-semibold">
+          <p className="text-xl lg:text-2xl text-white mb-8 font-semibold drop-shadow-md">
             Kamu lihat ini berarti, Kamu butuh ini !
           </p>
-          <button className="bg-[#0C098C] text-white px-16 py-2 rounded font-normal transition-colors text-md">
+          <button className="bg-[#0C098C] text-white px-16 py-2 rounded font-normal transition-colors text-md hover:bg-[#0A0678]">
             Kontak Kami
           </button>
         </div>
