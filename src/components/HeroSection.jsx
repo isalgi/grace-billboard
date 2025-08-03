@@ -91,15 +91,15 @@ export default function HeroSection() {
       </nav>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex items-center min-h-screen px-6 lg:px-12">
-        <div className="max-w-2xl">
+      <div className="relative z-10 px-6 lg:px-12 pt-16 lg:pt-24">
+        <div className="max-w-3xl lg:max-w-4xl">
           <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
-            Selamat Datang di Grace Billboard
+            Selamat Datang di Grace <br /> Billboard
           </h1>
-          <p className="text-xl lg:text-2xl text-white mb-8 font-light">
+          <p className="text-xl lg:text-2xl text-white mb-8 font-semibold">
             Kamu lihat ini berarti, Kamu butuh ini !
           </p>
-          <button className="bg-indigo-700 hover:bg-indigo-800 text-white px-8 py-3 rounded font-medium transition-colors text-lg">
+          <button className="bg-[#0C098C] text-white px-16 py-2 rounded font-normal transition-colors text-md">
             Kontak Kami
           </button>
         </div>
