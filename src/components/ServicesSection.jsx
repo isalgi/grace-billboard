@@ -33,7 +33,7 @@ function ServicesSection() {
   ];
 
   return (
-    <section className="flex flex-col gap-10 items-center p-16 bg-neutral-50 max-sm:px-5 max-sm:py-10 ">
+    <section className="flex flex-col gap-10 items-center p-16 bg-gray-100 max-sm:px-5 max-sm:py-10 ">
       <h2 className="text-3xl font-bold text-[#323232]">Available Area</h2>
       <div className="flex justify-center items-center w-full max-md:flex-col max-md:gap-10 gap-10">
         {services.map((service, index) => (

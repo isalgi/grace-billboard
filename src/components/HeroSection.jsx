@@ -71,7 +71,7 @@ export default function HeroSection() {
           >
             Kontak
           </a>
-          <button className="bg-[#0C098C] text-white px-6 py-2 rounded transition-colors font-normal text-sm ml-[50px]">
+          <button className="bg-[#0C098C] text-white px-6 py-2 rounded transition-colors font-normal text-sm ml-[100px]">
             Kontak Kami
           </button>
         </div>

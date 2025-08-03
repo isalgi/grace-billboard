@@ -1,6 +1,6 @@
 export default function FeaturesSection() {
   return (
-    <section className="pb-16 lg:pb-24 bg-white">
+    <section className="pb-12 lg:pb-16 bg-white">
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
         {/* Section Title */}
         <div className="text-center mb-16">

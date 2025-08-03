@@ -70,11 +70,11 @@ function ContactSection() {
   };
 
   return (
-    <section className="py-16">
+    <section className="py-8 bg-gray-50">
       <h2 className="text-3xl font-semibold text-center text-black mb-12">
         Butuh Bantuan ?
       </h2>
-      <div className="flex gap-12 px-16 pb-16 max-w-7xl mx-auto bg-white max-md:flex-col max-md:p-10 max-sm:p-5">
+      <div className="flex gap-12 px-16 pb-16 max-w-7xl mx-auto max-md:flex-col max-md:p-10 max-sm:p-5">
         <div className="flex flex-col gap-8 flex-1">
           <h2 className="text-7xl font-extrabold text-black max-sm:text-5xl">
             Hubungi Kami
