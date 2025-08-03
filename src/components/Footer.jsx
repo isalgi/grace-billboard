@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer className="px-20 pt-16 pb-10 bg-sky-50 max-sm:px-5 max-sm:py-10">
-      <div className="flex justify-between mb-20 max-sm:flex-col max-sm:gap-10">
+      <div className="flex justify-start mb-20 max-sm:flex-col gap-36">
         <div className="flex flex-col gap-2.5">
           <div className="flex items-center space-x-1">
             <div className="w-11 h-11 flex items-center justify-center">
