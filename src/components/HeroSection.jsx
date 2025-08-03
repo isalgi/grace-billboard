@@ -21,7 +21,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-8 font-semibold">
           <a
             href="#"
             className="text-white hover:text-gray-200 transition-colors"
@@ -67,7 +67,7 @@ export default function HeroSection() {
           >
             Kontak
           </a>
-          <button className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-2 rounded transition-colors">
+          <button className="bg-[#0C098C] text-white px-6 py-2 rounded transition-colors font-normal text-sm ml-[50px]">
             Kontak Kami
           </button>
         </div>
