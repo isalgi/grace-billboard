@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="px-20 pt-16 pb-10 bg-sky-50 max-sm:px-5 max-sm:py-10">
+    <footer className="px-20 pt-16 pb-10 bg-[#F6F6F6] max-sm:px-5 max-sm:py-10">
       <div className="flex justify-start items-start mb-16 max-sm:flex-col gap-24">
         {/* Logo and Description */}
         <div className="flex flex-col gap-4 max-w-[200px]">

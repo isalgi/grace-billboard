@@ -4,7 +4,6 @@ import ReviewsSection from "../components/ReviewsSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import ServicesSection from "../components/ServicesSection";
-import FaqSection from "../components/FaqSection";
 import MapSection from "../components/MapSection";
 
 function HomePage() {
@@ -15,7 +14,6 @@ function HomePage() {
         <FeatureSection />
         <ServicesSection />
         <MapSection />
-        <FaqSection />
         <ReviewsSection />
         <ContactSection />
         <Footer />
