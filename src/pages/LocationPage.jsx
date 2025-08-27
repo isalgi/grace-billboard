@@ -107,7 +107,7 @@ function LocationPage({
             {/* Contact Button */}
             <div className="text-center mt-8">
               <Link to="https://wa.me/6281239336293">
-                <button className="bg-[#0C098C] text-white px-12 py-3 rounded-lg text-lg font-medium hover:bg-blue-800 transition-colors">
+                <button className="bg-[#0C098C] text-white px-12 py-3 rounded-lg text-lg font-medium hover:bg-blue-800 transition-colors cursor-pointer">
                   Kontak Kami
                 </button>
               </Link>
