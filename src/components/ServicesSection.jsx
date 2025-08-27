@@ -3,69 +3,45 @@ import ServiceCard from "./ServiceCard";
 function ServicesSection() {
   const services = [
     {
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/bb3b2dee152d26a2ffaf5c0d3b56414ae4a1c4ed?placeholderIfAbsent=true",
-      title: "Jakarta Selatan",
+      image: "/src/assets/image-01.webp",
+      title: "Jl. Raya Bekasi Pulo Gadung",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt sit amet lorem quis dignissim. Vivamus facilisis venenatis eros, id fringilla dolor iaculis quis. Donec quis purus leo. Maecenas convallis congue pretium. Maecenas ac interdum tortor, sed ultricies lorem.",
-      price: "IDR 660.000",
+        "Lokasi billboard strategis di Jl. Raya Bekasi Pulo Gadung dengan traffic padat kendaraan setiap harinya. Area komersial dengan visibility tinggi yang cocok untuk berbagai jenis iklan bisnis Anda.",
+      price: "IDR 750.000",
+      link: "/lokasi/bekasi-pulogadung"
     },
     {
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/568e681e1f994c3c1eb36927b2fb7227eae688c5?placeholderIfAbsent=true",
-      title: "Jakarta Pusat",
+      image: "/src/assets/image-03.webp",
+      title: "Jl. Ahmad Yani Cempaka Putih",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt sit amet lorem quis dignissim. Vivamus facilisis venenatis eros, id fringilla dolor iaculis quis. Donec quis purus leo. Maecenas convallis congue pretium. Maecenas ac interdum tortor, sed ultricies lorem.",
-      price: "IDR 660.000",
+        "Billboard strategis di Jl. Ahmad Yani Cempaka Putih, salah satu jalan protokol Jakarta dengan tingkat visibility yang sangat tinggi. Lokasi ideal untuk branding dan promosi dengan target audience yang luas.",
+      price: "IDR 850.000",
+      link: "/lokasi/cempaka-putih"
     },
     {
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/c27dc58142a7987b215958f85e21619300aa1ede?placeholderIfAbsent=true",
-      title: "Jakarta Pusat",
+      image: "/src/assets/image-05.webp",
+      title: "Jl. Kebon Kacang Raya",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt sit amet lorem quis dignissim. Vivamus facilisis venenatis eros, id fringilla dolor iaculis quis. Donec quis purus leo. Maecenas convallis congue pretium. Maecenas ac interdum tortor, sed ultricies lorem.",
-      price: "IDR 660.000",
+        "Posisi billboard premium di Jl. Kebon Kacang Raya dengan akses mudah dan traffic tinggi. Area bisnis strategis yang memberikan exposure maksimal untuk iklan Anda dengan target market yang tepat.",
+      price: "IDR 650.000",
+      link: "/lokasi/kebon-kacang-raya"
     },
     {
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/d34237039bc47ebcb42b622ab7289cb2078a5b4a?placeholderIfAbsent=true",
-      title: "Jakarta Barat",
+      image: "/src/assets/image-07.webp",
+      title: "Jl. Matraman Raya",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt sit amet lorem quis dignissim. Vivamus facilisis venenatis eros, id fringilla dolor iaculis quis. Donec quis purus leo. Maecenas convallis congue pretium. Maecenas ac interdum tortor, sed ultricies lorem.",
-      price: "IDR 660.000",
+        "Billboard strategis di Jl. Matraman Raya dengan posisi yang sangat visible dari berbagai arah. Lokasi komersial dengan density traffic tinggi yang ideal untuk campaign advertising Anda.",
+      price: "IDR 700.000",
+      link: "/lokasi/matraman-raya"
     },
     {
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/bb3b2dee152d26a2ffaf5c0d3b56414ae4a1c4ed?placeholderIfAbsent=true",
-      title: "Jakarta Timur",
+      image: "/src/assets/image-09.webp",
+      title: "Jl. Perintis Kemerdekaan",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt sit amet lorem quis dignissim. Vivamus facilisis venenatis eros, id fringilla dolor iaculis quis. Donec quis purus leo. Maecenas convallis congue pretium. Maecenas ac interdum tortor, sed ultricies lorem.",
-      price: "IDR 660.000",
-    },
-    {
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/bb3b2dee152d26a2ffaf5c0d3b56414ae4a1c4ed?placeholderIfAbsent=true",
-      title: "Bogor",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt sit amet lorem quis dignissim. Vivamus facilisis venenatis eros, id fringilla dolor iaculis quis. Donec quis purus leo. Maecenas convallis congue pretium. Maecenas ac interdum tortor, sed ultricies lorem.",
-      price: "IDR 660.000",
-    },
-    {
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/bb3b2dee152d26a2ffaf5c0d3b56414ae4a1c4ed?placeholderIfAbsent=true",
-      title: "Depok",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt sit amet lorem quis dignissim. Vivamus facilisis venenatis eros, id fringilla dolor iaculis quis. Donec quis purus leo. Maecenas convallis congue pretium. Maecenas ac interdum tortor, sed ultricies lorem.",
-      price: "IDR 660.000",
-    },
-    {
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/bb3b2dee152d26a2ffaf5c0d3b56414ae4a1c4ed?placeholderIfAbsent=true",
-      title: "Bekasi",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt sit amet lorem quis dignissim. Vivamus facilisis venenatis eros, id fringilla dolor iaculis quis. Donec quis purus leo. Maecenas convallis congue pretium. Maecenas ac interdum tortor, sed ultricies lorem.",
-      price: "IDR 660.000",
-    },
+        "Lokasi billboard premium di Jl. Perintis Kemerdekaan dengan akses yang sangat strategis. Area dengan traffic density tinggi dan visibility optimal untuk berbagai jenis iklan komersial.",
+      price: "IDR 680.000",
+      link: "/lokasi/perintis-kemerdekaan"
+    }
   ];
 
   return (
@@ -73,7 +49,7 @@ function ServicesSection() {
       <h2 className="text-3xl font-bold text-[#323232]">Available Area</h2>
 
       {/* Grid Layout for Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-7xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl">
         {services.map((service, index) => (
           <ServiceCard
             key={index}
@@ -81,6 +57,7 @@ function ServicesSection() {
             title={service.title}
             description={service.description}
             price={service.price}
+            link={service.link}
           />
         ))}
       </div>
