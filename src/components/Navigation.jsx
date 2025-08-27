@@ -30,7 +30,7 @@ export default function Navigation({ isHome = false }) {
             Tentang Kami
           </a>
           <div className="relative group">
-            <button className="text-white hover:text-gray-200 transition-colors font-medium flex items-center">
+            <button className="text-white hover:text-gray-200 transition-colors font-medium flex items-center cursor-pointer">
               Layanan
               <svg
                 className="w-4 h-4 ml-1"

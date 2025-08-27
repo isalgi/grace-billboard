@@ -1,9 +1,9 @@
 function Footer() {
   return (
     <footer className="px-20 pt-16 pb-10 bg-sky-50 max-sm:px-5 max-sm:py-10">
-      <div className="flex justify-between items-start mb-20 max-sm:flex-col gap-12">
+      <div className="flex justify-start items-start mb-16 max-sm:flex-col gap-24">
         {/* Logo and Description */}
-        <div className="flex flex-col gap-4 max-w-xs">
+        <div className="flex flex-col gap-4 max-w-[200px]">
           <div className="flex items-center">
             <img
               src="/Bejanaanugerah 1.png"
@@ -11,9 +11,12 @@ function Footer() {
               className="h-16 w-auto"
             />
           </div>
-          <p className="text-sm text-black leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            tincidunt sit amet
+          <p className="text-black leading-none tracking-normal text-sm font-normal">
+            Lorem ipsum dolor sit amet,
+            <br />
+            consectetur adipiscing elit.
+            <br />
+            Nullam tincidunt sit amet
           </p>
         </div>
 
@@ -37,8 +40,11 @@ function Footer() {
                 Office Location
               </h3>
             </div>
-            <p className="text-sm text-black leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            <p className="text-black leading-none tracking-normal text-sm font-normal">
+              Lorem ipsum dolor sit amet,
+              <br />
+              consectetur adipiscing elit. Nullam
+              <br />
               tincidunt sit amet
             </p>
           </div>
@@ -57,8 +63,11 @@ function Footer() {
                 Contact us
               </h3>
             </div>
-            <p className="text-sm text-black leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            <p className="text-black leading-none tracking-normal text-sm font-normal">
+              Lorem ipsum dolor sit amet,
+              <br />
+              consectetur adipiscing elit. Nullam
+              <br />
               tincidunt sit amet
             </p>
           </div>
@@ -90,12 +99,13 @@ function Footer() {
         </div>
 
         {/* Ask Now */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 items-start">
           <h3 className="text-xl font-semibold text-[#0C098C]">Ask Now</h3>
           <a
             href="https://wa.me/6281239336293"
             target="_blank"
             rel="noopener noreferrer"
+            className="hover:opacity-80 transition-opacity"
           >
             <svg
               className="w-10 h-10 text-[#0C098C]"
