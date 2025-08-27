@@ -21,7 +21,7 @@ function LocationPage({
       <Navigation isHome={false} />
 
       {/* Hero Section - Simple Grid Layout */}
-      <section className="bg-white pt-32 pb-16">
+      <section className="bg-white pt-32 pb-2">
         <div className="container mx-auto px-5 md:px-10 lg:px-16">
           {/* Hero Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
