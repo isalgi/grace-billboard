@@ -34,7 +34,7 @@ function LocationPage({
                 {description}
               </p>
               <Link to="https://wa.me/6281239336293">
-                <button className="bg-white border border-[#0C098C] text-[#0C098C] hover:bg-blue-50 rounded-md px-6 py-3 text-lg font-medium">
+                <button className="bg-white border border-[#0C098C] text-[#0C098C] hover:bg-blue-50 rounded-md px-6 py-3 text-lg font-medium cursor-pointer">
                   Hubungi Kami
                 </button>
               </Link>
@@ -63,7 +63,7 @@ function LocationPage({
               <img
                 src={videoThumbnail}
                 alt="Location preview"
-                className="w-full h-[500px] object-cover rounded-lg"
+                className="w-full h-[500px] object-cover "
               />
 
               {/* Bottom Overlay with Time and Location Info */}
@@ -118,10 +118,10 @@ function LocationPage({
         {/* Recommendations Section */}
         {recommendations.length > 0 && (
           <div className="container mx-auto px-5 md:px-10 lg:px-16 mb-16">
-            <h2 className="text-2xl font-semibold text-[#0C098C] mb-8">
+            <h2 className="text-5xl font-semibold text-[#0C098C] mb-8">
               Rekomendasi Area Lain
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
               {recommendations.map((item, index) => (
                 <Link key={index} to={item.link} className="group">
                   <div className="bg-white rounded-3xl overflow-hidden hover:shadow-lg transition-shadow">
