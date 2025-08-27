@@ -27,14 +27,14 @@ function LocationPage({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             {/* Left Column - Content */}
             <div>
-              <h1 className="text-[#1196A9] text-[40px] leading-10 font-bold mb-6">
+              <h1 className="text-[#0C098C] text-[40px] leading-10 font-bold mb-6">
                 {title}
               </h1>
               <p className="text-gray-700 text-lg leading-relaxed mb-8">
                 {description}
               </p>
               <Link to="https://wa.me/6281239336293">
-                <button className="bg-white border border-[#1196A9] text-[#1196A9] hover:bg-cyan-50 rounded-md px-6 py-3 text-lg font-medium">
+                <button className="bg-white border border-[#0C098C] text-[#0C098C] hover:bg-blue-50 rounded-md px-6 py-3 text-lg font-medium">
                   Hubungi Kami
                 </button>
               </Link>
@@ -53,17 +53,17 @@ function LocationPage({
 
         {/* Location Preview Section */}
         <div className="container mx-auto px-5 md:px-10 lg:px-16 mb-16">
-          <h2 className="text-2xl font-semibold text-[#1196A9] text-center my-12">
+          <h2 className="text-2xl font-semibold text-[#0C098C] text-center my-12">
             Penampakan dari arah lain
           </h2>
 
           {/* Single Image with Overlay */}
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-lg mx-auto">
             <div className="relative">
               <img
                 src={videoThumbnail}
                 alt="Location preview"
-                className="w-full h-[400px] object-cover rounded-lg"
+                className="w-full h-[500px] object-cover rounded-lg"
               />
 
               {/* Bottom Overlay with Time and Location Info */}
@@ -98,7 +98,7 @@ function LocationPage({
 
             {/* Navigation Dots */}
             <div className="flex justify-center mt-6 space-x-2">
-              <div className="w-3 h-3 bg-[#1196A9] rounded-full"></div>
+              <div className="w-3 h-3 bg-[#0C098C] rounded-full"></div>
               <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
               <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
               <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
@@ -107,7 +107,7 @@ function LocationPage({
             {/* Contact Button */}
             <div className="text-center mt-8">
               <Link to="https://wa.me/6281239336293">
-                <button className="bg-[#1196A9] text-white px-12 py-3 rounded-lg text-lg font-medium hover:bg-cyan-700 transition-colors">
+                <button className="bg-[#0C098C] text-white px-12 py-3 rounded-lg text-lg font-medium hover:bg-blue-800 transition-colors">
                   Kontak Kami
                 </button>
               </Link>
@@ -118,35 +118,23 @@ function LocationPage({
         {/* Recommendations Section */}
         {recommendations.length > 0 && (
           <div className="container mx-auto px-5 md:px-10 lg:px-16 mb-16">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-8">
-              Other Strategic Locations
+            <h2 className="text-2xl font-semibold text-[#0C098C] mb-8">
+              Rekomendasi Area Lain
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {recommendations.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                >
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-6">
-                    <h3 className="font-semibold text-lg mb-2 text-gray-800">
-                      {item.name}
-                    </h3>
-                    <p className="text-gray-600 text-sm mb-4">
-                      Premium billboard location with high visibility
-                    </p>
-                    <Link
-                      to={item.link}
-                      className="bg-[#1196A9] text-white px-4 py-2 rounded hover:bg-cyan-700 transition-colors inline-block text-center w-full"
-                    >
-                      View Details
-                    </Link>
+                <Link key={index} to={item.link} className="group">
+                  <div className="bg-white rounded-3xl overflow-hidden hover:shadow-lg transition-shadow">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-full h-[300px] object-cover"
+                    />
                   </div>
-                </div>
+                  <h3 className="text-sm font-medium text-gray-800 group-hover:text-[#1196A9] transition-colors mt-3">
+                    {item.name}
+                  </h3>
+                </Link>
               ))}
             </div>
           </div>
