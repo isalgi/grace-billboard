@@ -19,7 +19,7 @@ export default function HeroSection() {
       <div className="relative z-20 px-6 lg:px-12 pt-16 lg:pt-24">
         <div className="max-w-3xl lg:max-w-4xl">
           <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
-            Selamat Datang di Grace <br /> Billboard
+            Selamat Datang di <br /> Bejanaanugerah
           </h1>
           <p className="text-xl lg:text-2xl text-white mb-8 font-semibold drop-shadow-md">
             Kamu lihat ini berarti, Kamu butuh ini !
