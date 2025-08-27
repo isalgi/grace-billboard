@@ -39,7 +39,7 @@ function LocationPage({
                 </button>
               </Link>
             </div>
-            
+
             {/* Right Column - Image */}
             <div className="rounded-xl overflow-hidden">
               <img
@@ -51,59 +51,66 @@ function LocationPage({
           </div>
         </div>
 
-        {/* Video Section */}
+        {/* Location Preview Section */}
         <div className="container mx-auto px-5 md:px-10 lg:px-16 mb-16">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-8">
-            Location Preview
+          <h2 className="text-2xl font-semibold text-[#1196A9] text-center my-12">
+            Penampakan dari arah lain
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Left Column - Video */}
-            <div>
-              <div className="relative">
-                <img
-                  src={videoThumbnail}
-                  alt="Location video preview"
-                  className="w-full h-64 object-cover rounded-lg"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="bg-black bg-opacity-75 text-white px-3 py-1 rounded">
-                    <span className="text-lg font-mono">{videoTime}</span>
-                  </div>
-                </div>
-                {qrCode && (
-                  <div className="absolute bottom-4 right-4 bg-white p-2 rounded">
-                    <div className="w-16 h-16 bg-gray-300 flex items-center justify-center text-xs">
-                      QR Code
+
+          {/* Single Image with Overlay */}
+          <div className="max-w-2xl mx-auto">
+            <div className="relative">
+              <img
+                src={videoThumbnail}
+                alt="Location preview"
+                className="w-full h-[400px] object-cover rounded-lg"
+              />
+
+              {/* Bottom Overlay with Time and Location Info */}
+              <div className="absolute bottom-0 left-0 right-0  text-white p-4 rounded-b-lg">
+                <div className="flex justify-between items-start">
+                  <div className="flex-1">
+                    <div className="text-3xl font-bold mb-1">{videoTime}</div>
+                    <div className="text-sm mb-1">03 Mei 2025</div>
+                    <div className="text-sm mb-1">Sabtu</div>
+                    <div className="text-xs leading-tight">
+                      Cemp. Putih Tim., Kec. Cemp. Putih,
+                      <br />
+                      Kota Jakarta Pusat, Daerah Khusus
+                      <br />
+                      Ibukota Jakarta
                     </div>
                   </div>
-                )}
+
+                  {/* Map/QR Code */}
+                  {qrCode && (
+                    <div className="w-20 h-16 bg-gray-300 rounded ml-4 flex items-center justify-center">
+                      <div className="text-xs text-gray-600 text-center">
+                        Google
+                        <br />
+                        Maps
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
 
-            {/* Right Column - Description */}
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                Experience the Location
-              </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Get a real-time view of this strategic billboard location. See
-                the actual traffic flow, visibility angles, and surroundings
-                that make this spot perfect for your advertising needs.
-              </p>
-              <div className="space-y-3 text-sm text-gray-600">
-                <div className="flex justify-between">
-                  <span>Daily Traffic:</span>
-                  <span className="font-medium">50,000+ vehicles</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Visibility Distance:</span>
-                  <span className="font-medium">200+ meters</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Peak Hours:</span>
-                  <span className="font-medium">7-9 AM, 5-7 PM</span>
-                </div>
-              </div>
+            {/* Navigation Dots */}
+            <div className="flex justify-center mt-6 space-x-2">
+              <div className="w-3 h-3 bg-[#1196A9] rounded-full"></div>
+              <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
+              <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
+              <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
+            </div>
+
+            {/* Contact Button */}
+            <div className="text-center mt-8">
+              <Link to="https://wa.me/6281239336293">
+                <button className="bg-[#1196A9] text-white px-12 py-3 rounded-lg text-lg font-medium hover:bg-cyan-700 transition-colors">
+                  Kontak Kami
+                </button>
+              </Link>
             </div>
           </div>
         </div>
