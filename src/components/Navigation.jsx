@@ -3,19 +3,58 @@ import { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
 
 export default function Navigation({ isHome = false }) {
-  const [isJabodetabekHovered, setIsJabodetabekHovered] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isInsideLeftColumn, setIsInsideLeftColumn] = useState(false);
+  const [isInsideRightColumn, setIsInsideRightColumn] = useState(false);
   const jabodetabekRef = useRef(null);
   const [portalPosition, setPortalPosition] = useState({ top: 0, left: 0 });
+  const closeTimeoutRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    if (!isInsideLeftColumn && !isInsideRightColumn) {
+      closeTimeoutRef.current = setTimeout(() => {
+        setIsDropdownOpen(false);
+      }, 500);
+    }
+  };
+
+  const handleLeftColumnEnter = () => {
+    setIsInsideLeftColumn(true);
+    handleMouseEnter();
+  };
+
+  const handleLeftColumnLeave = () => {
+    setIsInsideLeftColumn(false);
+    handleMouseLeave();
+  };
+
+  const handleRightColumnEnter = () => {
+    setIsInsideRightColumn(true);
+    handleMouseEnter();
+  };
+
+  const handleRightColumnLeave = () => {
+    setIsInsideRightColumn(false);
+    handleMouseLeave();
+  };
 
   useEffect(() => {
-    if (isJabodetabekHovered && jabodetabekRef.current) {
+    if (isDropdownOpen && jabodetabekRef.current) {
       const rect = jabodetabekRef.current.getBoundingClientRect();
       setPortalPosition({
         top: rect.top,
         left: rect.right + 24, // 24px gap (ml-6)
       });
     }
-  }, [isJabodetabekHovered]);
+  }, [isDropdownOpen]);
 
   return (
     <nav
@@ -45,7 +84,11 @@ export default function Navigation({ isHome = false }) {
           >
             Tentang Kami
           </a>
-          <div className="relative group">
+          <div
+            className="relative"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             <button className="text-white hover:text-gray-200 transition-colors font-medium flex items-center cursor-pointer">
               Layanan
               <svg
@@ -65,9 +108,11 @@ export default function Navigation({ isHome = false }) {
 
             {/* Dropdown Menu - Left Box */}
             <div
-              className="absolute left-0 mt-2 bg-white rounded-md shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100"
-              onMouseEnter={() => setIsJabodetabekHovered(true)}
-              onMouseLeave={() => setIsJabodetabekHovered(false)}
+              className={`absolute left-0 mt-2 bg-white rounded-md shadow-2xl transition-all duration-300 border border-gray-100 ${
+                isDropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
+              }`}
+              onMouseEnter={handleLeftColumnEnter}
+              onMouseLeave={handleLeftColumnLeave}
             >
               <div className="p-6">
                 <div className="relative">
@@ -117,90 +162,76 @@ export default function Navigation({ isHome = false }) {
       </div>
 
       {/* Portal for Right Column Dropdown */}
-      {isJabodetabekHovered &&
+      {isDropdownOpen &&
         createPortal(
-          <>
-            {/* Invisible bridge to connect hover areas */}
-            <div
-              className="fixed z-40"
-              style={{
-                top: `${portalPosition.top - 20}px`,
-                left: `${portalPosition.left - 48}px`,
-                width: "72px",
-                height: "400px",
-              }}
-              onMouseEnter={() => setIsJabodetabekHovered(true)}
-              onMouseLeave={() => setIsJabodetabekHovered(false)}
-            />
-            <div
-              className="fixed z-50 bg-white rounded-md shadow-2xl border border-gray-100 p-8"
-              style={{
-                top: `${portalPosition.top - 24}px`,
-                left: `${portalPosition.left}px`,
-                minWidth: "280px",
-              }}
-              onMouseEnter={() => setIsJabodetabekHovered(true)}
-              onMouseLeave={() => setIsJabodetabekHovered(false)}
-            >
-              <div className="space-y-8">
-                <div className="relative">
-                  <Link
-                    to="/lokasi/perintis-kemerdekaan"
-                    className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
-                  >
-                    Jl. Perintis
-                    <br />
-                    Kemerdekaan
-                  </Link>
-                  <div className="h-px bg-[#0C098C] w-full mt-3"></div>
-                </div>
+          <div
+            className="fixed z-50 bg-white rounded-md shadow-2xl border border-gray-100 p-8"
+            style={{
+              top: `${portalPosition.top - 24}px`,
+              left: `${portalPosition.left}px`,
+              minWidth: "280px",
+            }}
+            onMouseEnter={handleRightColumnEnter}
+            onMouseLeave={handleRightColumnLeave}
+          >
+            <div className="space-y-8">
+              <div className="relative">
+                <Link
+                  to="/lokasi/perintis-kemerdekaan"
+                  className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
+                >
+                  Jl. Perintis
+                  <br />
+                  Kemerdekaan
+                </Link>
+                <div className="h-px bg-[#0C098C] w-full mt-3"></div>
+              </div>
 
-                <div className="relative">
-                  <Link
-                    to="/lokasi/cempaka-putih"
-                    className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
-                  >
-                    Jl. Ahmad Yani
-                    <br />
-                    Cempaka Putih
-                  </Link>
-                </div>
+              <div className="relative">
+                <Link
+                  to="/lokasi/cempaka-putih"
+                  className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
+                >
+                  Jl. Ahmad Yani
+                  <br />
+                  Cempaka Putih
+                </Link>
+              </div>
 
-                <div className="relative">
-                  <Link
-                    to="/lokasi/matraman-raya"
-                    className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
-                  >
-                    Jl. Matraman
-                    <br />
-                    Raya
-                  </Link>
-                </div>
+              <div className="relative">
+                <Link
+                  to="/lokasi/matraman-raya"
+                  className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
+                >
+                  Jl. Matraman
+                  <br />
+                  Raya
+                </Link>
+              </div>
 
-                <div className="relative">
-                  <Link
-                    to="/lokasi/bekasi-pulogadung"
-                    className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
-                  >
-                    Jl. Raya Bekasi
-                    <br />
-                    Pulo Gadung
-                  </Link>
-                </div>
+              <div className="relative">
+                <Link
+                  to="/lokasi/bekasi-pulogadung"
+                  className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
+                >
+                  Jl. Raya Bekasi
+                  <br />
+                  Pulo Gadung
+                </Link>
+              </div>
 
-                <div className="relative">
-                  <Link
-                    to="/lokasi/kebon-kacang-raya"
-                    className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
-                  >
-                    Jl. Kebon
-                    <br />
-                    Kacang Raya
-                  </Link>
-                </div>
+              <div className="relative">
+                <Link
+                  to="/lokasi/kebon-kacang-raya"
+                  className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
+                >
+                  Jl. Kebon
+                  <br />
+                  Kacang Raya
+                </Link>
               </div>
             </div>
-          </>,
+          </div>,
           document.body
         )}
     </nav>
