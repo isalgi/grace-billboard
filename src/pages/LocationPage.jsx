@@ -98,6 +98,7 @@ function LocationPage({
                       >
                         {videoTime}
                       </div>
+                      <div className="w-0.5 bg-yellow-400 h-12 mt-2"></div>
                       <div>
                         <div className="text-lg">03 Mei 2025</div>
                         <div className="text-lg">Sabtu</div>
