@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
 export default function Navigation({ isHome = false }) {
   const location = useLocation();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isRightColumnOpen, setIsRightColumnOpen] = useState(false);
   const [isInsideLeftColumn, setIsInsideLeftColumn] = useState(false);
   const [isInsideRightColumn, setIsInsideRightColumn] = useState(false);
   const jabodetabekRef = useRef(null);
@@ -29,6 +30,7 @@ export default function Navigation({ isHome = false }) {
 
   const closeDropdown = () => {
     setIsDropdownOpen(false);
+    setIsRightColumnOpen(false);
     if (closeTimeoutRef.current) {
       clearTimeout(closeTimeoutRef.current);
       closeTimeoutRef.current = null;
@@ -83,14 +85,18 @@ export default function Navigation({ isHome = false }) {
   };
 
   useEffect(() => {
-    if (isDropdownOpen && jabodetabekRef.current) {
+    if (isRightColumnOpen && jabodetabekRef.current) {
       const rect = jabodetabekRef.current.getBoundingClientRect();
       setPortalPosition({
         top: rect.top + window.scrollY,
         left: rect.right + 32, // 32px gap
       });
     }
-  }, [isDropdownOpen]);
+  }, [isRightColumnOpen]);
+
+  const handleJabodetabekClick = () => {
+    setIsRightColumnOpen(true);
+  };
 
   return (
     <nav
@@ -157,6 +163,7 @@ export default function Navigation({ isHome = false }) {
                   <div
                     ref={jabodetabekRef}
                     className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors cursor-pointer"
+                    onClick={handleJabodetabekClick}
                   >
                     Jabodetabek
                     <span className="text-gray-400 ml-2">></span>
@@ -200,7 +207,7 @@ export default function Navigation({ isHome = false }) {
       </div>
 
       {/* Portal for Right Column Dropdown */}
-      {isDropdownOpen &&
+      {isRightColumnOpen &&
         createPortal(
           <div
             className="absolute z-50 bg-white rounded-md shadow-2xl border border-gray-100 p-8"
