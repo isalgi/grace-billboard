@@ -8,9 +8,10 @@ import ServiceCard from "../components/ServiceCard";
 function ArticlePage() {
   // Mock article data - in a real app this would come from props or API
   const article = {
-    title: "Tentang CV Bejanaanugerah: Solusi Terbaik untuk Billboard Advertising Anda",
+    title:
+      "Tentang CV Bejanaanugerah: Solusi Terbaik untuk Billboard Advertising Anda",
     date: "December 15, 2024",
-    image: "/src/assets/image-01.webp",
+    image: "/src/assets/image-06.webp",
     content: `
       <p>CV Bejanaanugerah adalah penyedia layanan iklan billboard & videotron terdepan yang telah 12+ tahun melayani advertising dengan klien-klien dengan posisi strategis sehingga memastikan iklan Anda terlihat oleh ribuan orang setiap harinya.</p>
       
@@ -45,32 +46,35 @@ function ArticlePage() {
       <p>Dengan pengalaman lebih dari 12 tahun di industri advertising, CV Bejanaanugerah memahami betul kebutuhan klien akan solusi periklanan yang efektif. Kami tidak hanya menyediakan tempat untuk beriklan, tetapi juga menjadi partner strategis dalam mengembangkan brand awareness bisnis Anda.</p>
       
       <p>Setiap lokasi billboard yang kami sediakan telah melalui survei mendalam untuk memastikan tingkat visibility dan traffic yang optimal. Hal ini menjadikan investasi advertising Anda lebih efektif dan memberikan ROI yang maksimal.</p>
-    `
+    `,
   };
 
-  // Recommended locations data 
+  // Recommended locations data
   const recommendedLocations = [
     {
       image: "/src/assets/image-01.webp",
       title: "Jl. Raya Bekasi Pulo Gadung",
-      description: "Lokasi billboard strategis dengan traffic padat kendaraan setiap harinya. Area komersial dengan visibility tinggi.",
+      description:
+        "Lokasi billboard strategis dengan traffic padat kendaraan setiap harinya. Area komersial dengan visibility tinggi.",
       price: "IDR 750.000",
-      link: "/lokasi/bekasi-pulogadung"
+      link: "/lokasi/bekasi-pulogadung",
     },
     {
-      image: "/src/assets/image-03.webp", 
+      image: "/src/assets/image-03.webp",
       title: "Jl. Ahmad Yani Cempaka Putih",
-      description: "Billboard strategis di jalan protokol Jakarta dengan tingkat visibility yang sangat tinggi.",
+      description:
+        "Billboard strategis di jalan protokol Jakarta dengan tingkat visibility yang sangat tinggi.",
       price: "IDR 850.000",
-      link: "/lokasi/cempaka-putih"
+      link: "/lokasi/cempaka-putih",
     },
     {
       image: "/src/assets/image-05.webp",
-      title: "Jl. Kebon Kacang Raya", 
-      description: "Posisi billboard premium dengan akses mudah dan traffic tinggi. Area bisnis strategis.",
+      title: "Jl. Kebon Kacang Raya",
+      description:
+        "Posisi billboard premium dengan akses mudah dan traffic tinggi. Area bisnis strategis.",
       price: "IDR 650.000",
-      link: "/lokasi/kebon-kacang-raya"
-    }
+      link: "/lokasi/kebon-kacang-raya",
+    },
   ];
 
   return (
@@ -78,28 +82,16 @@ function ArticlePage() {
       <Navigation isHome={false} />
 
       <div className="container mx-auto px-5 md:px-10 lg:px-20 py-8 pt-32">
-        <Link to="/" className="text-cyan-600 flex items-center gap-2 mb-4">
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <path d="M19 12H5M12 19l-7-7 7-7"></path>
-          </svg>
-          Back to Home
-        </Link>
-
-        <h1 className="text-3xl text-cyan-600 mb-6 font-semibold">Article</h1>
+        <h1 className="text-[48px] text-[#0C098C] mb-6 font-semibold">
+          Tentang CV Bejanaanugerah
+        </h1>
 
         {/* Image container with full width */}
         <div className="w-full overflow-hidden rounded-lg mb-6">
           <img
             src={article.image}
             alt={article.title}
-            className="w-full max-h-[400px] object-cover"
+            className="w-full max-h-[600px] object-cover"
             loading="lazy"
           />
         </div>
@@ -129,54 +121,7 @@ function ArticlePage() {
             [&>*]:text-left"
           dangerouslySetInnerHTML={{ __html: article.content }}
         />
-
-        {/* Call to Action */}
-        <div className="my-12 p-8 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl border border-blue-100">
-          <div className="text-center">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-              Ready to Advertise with Us?
-            </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Dapatkan exposure maksimal untuk bisnis Anda dengan memilih lokasi billboard strategis dari CV Bejanaanugerah. 
-              Tim profesional kami siap membantu merealisasikan campaign advertising yang efektif.
-            </p>
-            <Link to="https://wa.me/6281239336293">
-              <button className="bg-[#1196A9] text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-cyan-700 transition-colors">
-                Contact Us Now
-              </button>
-            </Link>
-          </div>
-        </div>
       </div>
-
-      {/* Location Recommendations Section */}
-      <section className="container mx-auto px-5 md:px-10 lg:px-20 py-12">
-        <h2 className="text-2xl font-medium text-cyan-600 mb-8">
-          Strategic Billboard Locations
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          {recommendedLocations.map((location) => (
-            <ServiceCard
-              key={location.link}
-              image={location.image}
-              title={location.title}
-              description={location.description}
-              price={location.price}
-              link={location.link}
-            />
-          ))}
-        </div>
-
-        <div className="text-right">
-          <Link
-            to="/"
-            className="text-sm font-medium text-cyan-600 hover:text-cyan-700"
-          >
-            View All Locations &gt;&gt;
-          </Link>
-        </div>
-      </section>
 
       <ReviewsSection />
       <ContactSection />
