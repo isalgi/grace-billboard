@@ -85,11 +85,17 @@ function LocationPage({
               />
 
               {/* Bottom Overlay with Time and Location Info */}
-              <div className="absolute bottom-0 left-0 right-0  text-white p-6">
+              <div className="absolute bottom-0 left-0 right-0  text-white p-2">
                 <div className="flex justify-between items-end">
                   <div className="flex-1">
                     <div className="flex items-start gap-4 mb-3">
-                      <div className="text-6xl font-bold leading-none">
+                      <div
+                        className="text-6xl font-normal leading-none tracking-tighter"
+                        style={{
+                          transform: "scaleX(0.8)",
+                          transformOrigin: "left",
+                        }}
+                      >
                         {videoTime}
                       </div>
                       <div>
