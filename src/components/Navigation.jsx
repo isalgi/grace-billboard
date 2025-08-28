@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
-import { createPortal } from "react-dom";
 
 export default function Navigation({ isHome = false }) {
   const location = useLocation();
@@ -8,8 +7,6 @@ export default function Navigation({ isHome = false }) {
   const [isRightColumnOpen, setIsRightColumnOpen] = useState(false);
   const [isInsideLeftColumn, setIsInsideLeftColumn] = useState(false);
   const [isInsideRightColumn, setIsInsideRightColumn] = useState(false);
-  const jabodetabekRef = useRef(null);
-  const [portalPosition, setPortalPosition] = useState({ top: 0, left: 0 });
   const closeTimeoutRef = useRef(null);
 
   const handleMouseEnter = () => {
@@ -84,16 +81,6 @@ export default function Navigation({ isHome = false }) {
     handleMouseLeave();
   };
 
-  useEffect(() => {
-    if (isRightColumnOpen && jabodetabekRef.current) {
-      const rect = jabodetabekRef.current.getBoundingClientRect();
-      setPortalPosition({
-        top: rect.top + window.scrollY,
-        left: rect.right + 32, // 32px gap
-      });
-    }
-  }, [isRightColumnOpen]);
-
   const handleJabodetabekClick = () => {
     setIsRightColumnOpen(true);
   };
@@ -161,7 +148,6 @@ export default function Navigation({ isHome = false }) {
               <div className="p-6">
                 <div className="relative">
                   <div
-                    ref={jabodetabekRef}
                     className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors cursor-pointer"
                     onClick={handleJabodetabekClick}
                   >
@@ -172,6 +158,108 @@ export default function Navigation({ isHome = false }) {
                 </div>
               </div>
             </div>
+
+            {/* Right Column Dropdown */}
+            {isRightColumnOpen && (
+              <div
+                className="absolute left-full top-8 ml-28 bg-white rounded-md shadow-2xl border border-gray-100 p-8 min-w-[280px]"
+                onMouseEnter={handleRightColumnEnter}
+                onMouseLeave={handleRightColumnLeave}
+                data-dropdown-container
+              >
+                <div className="space-y-8">
+                  <div className="relative">
+                    <Link
+                      to="/lokasi/perintis-kemerdekaan"
+                      className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
+                    >
+                      Jl. Perintis
+                      <br />
+                      Kemerdekaan
+                    </Link>
+                    <div
+                      className={`h-px w-full mt-3 ${
+                        location.pathname === "/lokasi/perintis-kemerdekaan"
+                          ? "bg-[#0C098C]"
+                          : "bg-transparent"
+                      }`}
+                    ></div>
+                  </div>
+
+                  <div className="relative">
+                    <Link
+                      to="/lokasi/cempaka-putih"
+                      className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
+                    >
+                      Jl. Ahmad Yani
+                      <br />
+                      Cempaka Putih
+                    </Link>
+                    <div
+                      className={`h-px w-full mt-3 ${
+                        location.pathname === "/lokasi/cempaka-putih"
+                          ? "bg-[#0C098C]"
+                          : "bg-transparent"
+                      }`}
+                    ></div>
+                  </div>
+
+                  <div className="relative">
+                    <Link
+                      to="/lokasi/matraman-raya"
+                      className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
+                    >
+                      Jl. Matraman
+                      <br />
+                      Raya
+                    </Link>
+                    <div
+                      className={`h-px w-full mt-3 ${
+                        location.pathname === "/lokasi/matraman-raya"
+                          ? "bg-[#0C098C]"
+                          : "bg-transparent"
+                      }`}
+                    ></div>
+                  </div>
+
+                  <div className="relative">
+                    <Link
+                      to="/lokasi/bekasi-pulogadung"
+                      className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
+                    >
+                      Jl. Raya Bekasi
+                      <br />
+                      Pulo Gadung
+                    </Link>
+                    <div
+                      className={`h-px w-full mt-3 ${
+                        location.pathname === "/lokasi/bekasi-pulogadung"
+                          ? "bg-[#0C098C]"
+                          : "bg-transparent"
+                      }`}
+                    ></div>
+                  </div>
+
+                  <div className="relative">
+                    <Link
+                      to="/lokasi/kebon-kacang-raya"
+                      className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
+                    >
+                      Jl. Kebon
+                      <br />
+                      Kacang Raya
+                    </Link>
+                    <div
+                      className={`h-px w-full mt-3 ${
+                        location.pathname === "/lokasi/kebon-kacang-raya"
+                          ? "bg-[#0C098C]"
+                          : "bg-transparent"
+                      }`}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
           <a
             href="#kontak"
@@ -205,115 +293,6 @@ export default function Navigation({ isHome = false }) {
           </svg>
         </button>
       </div>
-
-      {/* Portal for Right Column Dropdown */}
-      {isRightColumnOpen &&
-        createPortal(
-          <div
-            className="absolute z-50 bg-white rounded-md shadow-2xl border border-gray-100 p-8"
-            style={{
-              top: `${portalPosition.top - 24}px`,
-              left: `${portalPosition.left}px`,
-              minWidth: "280px",
-            }}
-            onMouseEnter={handleRightColumnEnter}
-            onMouseLeave={handleRightColumnLeave}
-            data-dropdown-container
-          >
-            <div className="space-y-8">
-              <div className="relative">
-                <Link
-                  to="/lokasi/perintis-kemerdekaan"
-                  className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
-                >
-                  Jl. Perintis
-                  <br />
-                  Kemerdekaan
-                </Link>
-                <div
-                  className={`h-px w-full mt-3 ${
-                    location.pathname === "/lokasi/perintis-kemerdekaan"
-                      ? "bg-[#0C098C]"
-                      : "bg-transparent"
-                  }`}
-                ></div>
-              </div>
-
-              <div className="relative">
-                <Link
-                  to="/lokasi/cempaka-putih"
-                  className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
-                >
-                  Jl. Ahmad Yani
-                  <br />
-                  Cempaka Putih
-                </Link>
-                <div
-                  className={`h-px w-full mt-3 ${
-                    location.pathname === "/lokasi/cempaka-putih"
-                      ? "bg-[#0C098C]"
-                      : "bg-transparent"
-                  }`}
-                ></div>
-              </div>
-
-              <div className="relative">
-                <Link
-                  to="/lokasi/matraman-raya"
-                  className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
-                >
-                  Jl. Matraman
-                  <br />
-                  Raya
-                </Link>
-                <div
-                  className={`h-px w-full mt-3 ${
-                    location.pathname === "/lokasi/matraman-raya"
-                      ? "bg-[#0C098C]"
-                      : "bg-transparent"
-                  }`}
-                ></div>
-              </div>
-
-              <div className="relative">
-                <Link
-                  to="/lokasi/bekasi-pulogadung"
-                  className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
-                >
-                  Jl. Raya Bekasi
-                  <br />
-                  Pulo Gadung
-                </Link>
-                <div
-                  className={`h-px w-full mt-3 ${
-                    location.pathname === "/lokasi/bekasi-pulogadung"
-                      ? "bg-[#0C098C]"
-                      : "bg-transparent"
-                  }`}
-                ></div>
-              </div>
-
-              <div className="relative">
-                <Link
-                  to="/lokasi/kebon-kacang-raya"
-                  className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
-                >
-                  Jl. Kebon
-                  <br />
-                  Kacang Raya
-                </Link>
-                <div
-                  className={`h-px w-full mt-3 ${
-                    location.pathname === "/lokasi/kebon-kacang-raya"
-                      ? "bg-[#0C098C]"
-                      : "bg-transparent"
-                  }`}
-                ></div>
-              </div>
-            </div>
-          </div>,
-          document.body
-        )}
     </nav>
   );
 }
