@@ -9,19 +9,10 @@ export default function Navigation({ isHome = false }) {
   const [isInsideRightColumn, setIsInsideRightColumn] = useState(false);
   const closeTimeoutRef = useRef(null);
 
-  const handleMouseEnter = () => {
-    if (closeTimeoutRef.current) {
-      clearTimeout(closeTimeoutRef.current);
-      closeTimeoutRef.current = null;
-    }
-    setIsDropdownOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    if (!isInsideLeftColumn && !isInsideRightColumn) {
-      closeTimeoutRef.current = setTimeout(() => {
-        setIsDropdownOpen(false);
-      }, 300);
+  const handleLayananClick = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+    if (!isDropdownOpen) {
+      setIsRightColumnOpen(false);
     }
   };
 
@@ -61,26 +52,6 @@ export default function Navigation({ isHome = false }) {
     return () => document.removeEventListener("keydown", handleEscape);
   }, [isDropdownOpen]);
 
-  const handleLeftColumnEnter = () => {
-    setIsInsideLeftColumn(true);
-    handleMouseEnter();
-  };
-
-  const handleLeftColumnLeave = () => {
-    setIsInsideLeftColumn(false);
-    handleMouseLeave();
-  };
-
-  const handleRightColumnEnter = () => {
-    setIsInsideRightColumn(true);
-    handleMouseEnter();
-  };
-
-  const handleRightColumnLeave = () => {
-    setIsInsideRightColumn(false);
-    handleMouseLeave();
-  };
-
   const handleJabodetabekClick = () => {
     setIsRightColumnOpen(true);
   };
@@ -113,13 +84,11 @@ export default function Navigation({ isHome = false }) {
           >
             Tentang Kami
           </Link>
-          <div
-            className="relative"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            data-dropdown-container
-          >
-            <button className="text-white hover:text-gray-200 transition-colors font-medium flex items-center cursor-pointer">
+          <div className="relative" data-dropdown-container>
+            <button
+              className="text-white hover:text-gray-200 transition-colors font-medium flex items-center cursor-pointer"
+              onClick={handleLayananClick}
+            >
               Layanan
               <svg
                 className="w-4 h-4 ml-1"
@@ -141,8 +110,6 @@ export default function Navigation({ isHome = false }) {
               className={`absolute left-0 mt-2 bg-white rounded-md shadow-2xl border border-gray-100 ${
                 isDropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
               }`}
-              onMouseEnter={handleLeftColumnEnter}
-              onMouseLeave={handleLeftColumnLeave}
               data-dropdown-container
             >
               <div className="p-6">
@@ -162,9 +129,7 @@ export default function Navigation({ isHome = false }) {
             {/* Right Column Dropdown */}
             {isRightColumnOpen && (
               <div
-                className="absolute left-full top-8 ml-20 bg-white rounded-md shadow-2xl border border-gray-100 p-8 min-w-[200px]"
-                onMouseEnter={handleRightColumnEnter}
-                onMouseLeave={handleRightColumnLeave}
+                className="absolute left-full top-8 ml-20 bg-white rounded-md shadow-2xl border border-gray-100 p-6 min-w-[200px]"
                 data-dropdown-container
               >
                 <div className="space-y-8">
