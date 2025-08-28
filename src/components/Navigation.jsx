@@ -236,7 +236,7 @@ export default function Navigation({ isHome = false }) {
 
         {/* Contact Button */}
         <Link to="">
-          <button className="bg-[#0C098C] text-white px-6 py-2 rounded hover:bg-[#0A0678] transition-colors font-medium cursor-pointer">
+          <button className="bg-[#0C098C] text-white px-8 py-2 rounded hover:bg-[#0A0678] transition-colors font-medium cursor-pointer">
             Kontak Kami
           </button>
         </Link>
