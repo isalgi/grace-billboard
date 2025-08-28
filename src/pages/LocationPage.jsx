@@ -88,7 +88,7 @@ function LocationPage({
               <div className="absolute bottom-0 left-0 right-0  text-white p-2">
                 <div className="flex justify-between items-end">
                   <div className="flex-1">
-                    <div className="flex items-start gap-4 mb-3">
+                    <div className="flex items-start gap-2 mb-3">
                       <div
                         className="text-6xl font-normal leading-none tracking-tighter"
                         style={{
@@ -98,7 +98,7 @@ function LocationPage({
                       >
                         {videoTime}
                       </div>
-                      <div className="w-0.5 bg-yellow-400 h-12 mt-2"></div>
+                      <div className="w-[3px] bg-yellow-400 h-12 mt-2 -ml-6"></div>
                       <div>
                         <div className="text-lg">03 Mei 2025</div>
                         <div className="text-lg">Sabtu</div>
