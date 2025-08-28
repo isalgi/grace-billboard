@@ -1,4 +1,7 @@
 import LocationPage from "./LocationPage";
+import mainImageSrc from "../assets/kebon/image-04.webp";
+import additionalImage1 from "../assets/kebon/image-05.webp";
+import additionalImage2 from "../assets/kebon/image-10.webp";
 
 function KebonKacangRayaPage() {
   const recommendations = [
@@ -24,7 +27,7 @@ function KebonKacangRayaPage() {
     },
   ];
 
-  const additionalImages = ["", "", ""];
+  const additionalImages = [mainImageSrc, additionalImage1, additionalImage2];
 
   return (
     <LocationPage
@@ -33,7 +36,7 @@ function KebonKacangRayaPage() {
       Kemerdekaan', terletak di seberang kampus ASMI, dekat dengan Mall Bella Terra; 
       Konro Karebosi; Pallubasa Serigala; serta area ramai lainnya. View dari arah 
       Cempaka Putih menuju Kelapa Gading/Pulo Gadung."
-      mainImage=""
+      mainImage={mainImageSrc}
       carouselMainImage=""
       additionalImages={additionalImages}
       recommendations={recommendations}

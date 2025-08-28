@@ -1,4 +1,7 @@
 import LocationPage from "./LocationPage";
+import mainImageSrc from "../assets/ahmad/image-01.webp";
+import additionalImage1 from "../assets/ahmad/image-08.webp";
+import additionalImage2 from "../assets/ahmad/image-09.webp";
 
 function CempakaPutihPage() {
   const recommendations = [
@@ -24,7 +27,7 @@ function CempakaPutihPage() {
     },
   ];
 
-  const additionalImages = ["", "", ""];
+  const additionalImages = [mainImageSrc, additionalImage1, additionalImage2];
 
   return (
     <LocationPage
@@ -34,7 +37,7 @@ function CempakaPutihPage() {
        Jayabaya; dan area ramai lainnya. Billboard bisa terlihat dari jalan arteri ataupun 
        jalan tol (view atas). View dari arah Rawamangun/Pramuka menuju Cempaka Putih/
        Kelapa Gading/Tanjung Priok."
-      mainImage=""
+      mainImage={mainImageSrc}
       carouselMainImage=""
       additionalImages={additionalImages}
       recommendations={recommendations}
