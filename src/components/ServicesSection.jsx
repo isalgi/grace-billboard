@@ -4,13 +4,13 @@ function ServicesSection() {
   const services = [
     {
       image: "/src/assets/image-09.webp",
-      title: "Jl. Perintis Kemerdekaan",
+      title: "Jl. Perintis\nKemerdekaan",
       description:
         "Berada di jalan protokol (Protokol B), dapat hilir Taman/Makarta cabang Kemayoran Jakarta Pusat sebesar kurang lebih 4KM, dekat dengan Mall Bola, Plaza Kuning, Komplex Jakarta Trade Center, menuju Kelapa Gading area ramai lainnya. View dari arah Cemara Pulih/Kelapa Gading menuju Priok.",
     },
     {
       image: "/src/assets/image-03.webp",
-      title: "Jl. Ahmad Yani Cempaka Putih",
+      title: "Jl. Ahmad Yani\nCempaka Putih",
       description:
         "Billboard berada di jalan protokol (Protokol A), berada service di dekat dengan PD. Pasar Senen, Gedung Bappenas, dekat dengan Gedung Garmin, Universitas Jayabaya, PTC (Thamrinplaza Trade Center), pool B bis besar AKAR, area transito industri dan perdagangan, menuju ke banyak pusat stasium pusat Induk garut Senen. View dari arah Cemara Pulih/Kelapa Gading Tanjung Priok.",
     },
@@ -22,7 +22,7 @@ function ServicesSection() {
     },
     {
       image: "/src/assets/image-01.webp",
-      title: "Jl. Raya Bekasi Pulo Gadung",
+      title: "Jl. Raya Bekasi\n Pulo Gadung",
       description:
         "Terletak di tempat strategis, dekat dengan Mall PTC (Pulogadung Trade Center), pool B bis besar AKAR, area kawasan industri dan perdagangan, menuju ke banyak pusat ekonomi lainnya. View dari arah Cakung/Derzpen Induk menuju Senen/Gambir/Pramoedya HI menuju Kota Tanah Abang.",
     },
