@@ -108,16 +108,16 @@ function LocationPage({
 
                   {/* Map */}
                   {qrCode && (
-                    <div className="w-32 h-24 bg-blue-900 rounded-lg ml-6 overflow-hidden flex items-center justify-center relative">
-                      <div className="w-full h-full bg-gradient-to-br from-blue-800 to-blue-900 relative">
-                        {/* Simple map-like design */}
-                        <div className="absolute inset-2 border border-blue-300 rounded">
-                          <div className="w-2 h-2 bg-blue-400 rounded-full absolute top-2 left-2"></div>
-                          <div className="w-1 h-4 bg-blue-300 absolute top-4 left-3 transform rotate-45"></div>
-                          <div className="w-3 h-1 bg-blue-300 absolute bottom-2 right-2"></div>
-                          <div className="w-1 h-3 bg-blue-300 absolute bottom-3 right-4"></div>
-                        </div>
-                      </div>
+                    <div className="w-32 h-36 rounded-lg ml-6 overflow-hidden">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d326.6310505273689!2d106.91190605458272!3d-6.257176725161578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sid!4v1756397665242!5m2!1sen!2sid"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen=""
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                      ></iframe>
                     </div>
                   )}
                 </div>
