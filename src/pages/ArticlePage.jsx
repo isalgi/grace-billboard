@@ -8,44 +8,40 @@ import ServiceCard from "../components/ServiceCard";
 function ArticlePage() {
   // Mock article data - in a real app this would come from props or API
   const article = {
-    title:
-      "Tentang CV Bejanaanugerah: Solusi Terbaik untuk Billboard Advertising Anda",
-    date: "December 15, 2024",
+    title: "Best billboard spot you can find",
     image: "/src/assets/image-06.webp",
     content: `
-      <p>CV Bejanaanugerah adalah penyedia layanan iklan billboard & videotron terdepan yang telah 12+ tahun melayani advertising dengan klien-klien dengan posisi strategis sehingga memastikan iklan Anda terlihat oleh ribuan orang setiap harinya.</p>
+      <p>CV Bejanaanugerah adalah perusahaan yang bergerak di bidang periklanan luar ruang (Out of Home Advertising) dengan fokus utama pada penyediaan media billboard premium di berbagai titik strategis. Sejak berdiri, kami berkomitmen untuk menjadi pinta terdepan di industri periklanan bagi brand, perusahaan, dan instansi dalam membangun visibilitas, meningkatkan brand citra, serta menjangkau audiens yang lebih luas.</p>
       
-      <p>Kami menyediakan solusi periklanan yang efektif dan terjangkau untuk berbagai kebutuhan bisnis Anda. Dengan lokasi-lokasi billboard yang tersebar di area-area strategis Jakarta, kami memastikan iklan Anda mendapat exposure maksimal.</p>
+      <p>Kami memahami bahwa billboard bukan hanya sekedar media iklan, tetapi merupakan wujud brand yang hadir di tengah masyarakat setiap hari. Karena itu, setiap titik billboard yang kami kelola dipilih secara strategis—berada di lokasi dengan tingkat lalu lintas tinggi, mudah terlihat, dan sering dilalui oleh ribuan orang setiap harinya.</p>
       
-      <h3>Mengapa Memilih CV Bejanaanugerah?</h3>
+      <h3>Jaringan Billboard Kami</h3>
       
-      <p>CV Bejanaanugerah telah mempercayai mengiklankan berbagai brand besar dan kecil dengan rata-rata traffic mencapai 100k+ kendaraan yang melintasi setiap harinya.</p>
-      
-      <ul>
-        <li><strong>Kualitas terjamin dan paling teliti</strong> dalam instalment advertisemen</li>
-        <li><strong>Tidak perlu khawatir mengenai kualitas</strong> bila ada beriklan bersama kami</li>
-        <li><strong>Harga murah dengan kualitas terjamin</strong> yang sudah berpengalaman puluhan tahun bergerak di bidang advertising</li>
-        <li><strong>Terpercaya dan sudah melayani ratusan klien</strong> baik korporasi maupun perorangan dari Seluruh Nusantara, Terutama Jakarta dan sekitarnya</li>
-      </ul>
-      
-      <h3>Keunggulan Layanan Kami</h3>
-      
-      <p>Tim profesional kami siap membantu Anda dalam merancang dan memasang iklan billboard yang menarik perhatian:</p>
+      <p>CV Bejanaanugerah telah mempertuas jangkauan ke berbagai kota besar dan strategis di Indonesia, antara lain:</p>
       
       <ul>
-        <li>Lokasi strategis dengan traffic tinggi</li>
-        <li>Harga kompetitif dan terjangkau</li>
-        <li>Kualitas material billboard terbaik</li>
-        <li>Layanan pemasangan profesional</li>
-        <li>Maintenance rutin untuk memastikan kualitas tampilan</li>
-        <li>Konsultasi gratis untuk desain iklan yang efektif</li>
+        <li><strong>Jabodetabek</strong> – Pusat bisnis, pemerintahan, dan hiburan dengan pergerakan manusia dan kendaraan terbesar di Indonesia.</li>
+        <li><strong>Padang</strong> – Kota pesisir yang menjadi pusat ekonomi dan budaya di Sumatera Barat, dengan jalur lalu lintas utama yang ramai.</li>
+        <li><strong>Ambon</strong> – Gerbang utama kawasan Indonesia Timur, dengan potensi audiens yang beragam dan berkembang pesat.</li>
+        <li><strong>Gorontalo</strong> – Kota yang strategis sebagai jalur penghubung, dengan tingkat mobilitas masyarakat yang tinggi.</li>
       </ul>
       
-      <h3>Komitmen Terhadap Kualitas</h3>
+      <p>Keberadaan titik billboard kami di lokasi-lokasi tersebut memberikan nilai tambah berupa jangkauan luas, frekuensi tayang tinggi, dan peluang besar untuk meningkatkan brand awareness.</p>
       
-      <p>Dengan pengalaman lebih dari 12 tahun di industri advertising, CV Bejanaanugerah memahami betul kebutuhan klien akan solusi periklanan yang efektif. Kami tidak hanya menyediakan tempat untuk beriklan, tetapi juga menjadi partner strategis dalam mengembangkan brand awareness bisnis Anda.</p>
+      <h3>Keunggulan CV Bejanaanugerah</h3>
       
-      <p>Setiap lokasi billboard yang kami sediakan telah melalui survei mendalam untuk memastikan tingkat visibility dan traffic yang optimal. Hal ini menjadikan investasi advertising Anda lebih efektif dan memberikan ROI yang maksimal.</p>
+      <ul>
+        <li><strong>Lokasi Premium:</strong> Setiap spot billboard berada di jalan protokol, pusat kota, area bisnis, hingga jalur transportasi utama.</li>
+        <li><strong>Jangkauan Audiens Luas:</strong> Menjangkau masyarakat urban, komuter, perilaku bisnis, hingga wisatawan.</li>
+        <li><strong>Visibilitas Maksimal:</strong> Dirancang dengan ukuran besar dan sudut pandang yang tepat agar mudah dilihat oleh siapa saja.</li>
+        <li><strong>Pengelolaan Profesional:</strong> Tim kami memastikan billboard selalu dalam kondisi terbaik, sehingga iklan tampil optimal.</li>
+      </ul>
+      
+      <h3>Komitmen Kami</h3>
+      
+      <p>CV Bejanaanugerah tidak hanya menawarkan ruang iklan, tetapi juga solusi komunikasi visual yang dapat membantu klien meraih tujuan pemasaran mereka. Kami percaya bahwa iklan luar ruang yang efektif mampu menciptakan kesan kuat, tahan lama, dan membangun brand image di benak audiens.</p>
+      
+      <p>Dengan strategi penempatan yang tepat, CV Bejanaanugerah siap menjadi partner iklan luar ruang terpercaya untuk membawa brand Anda lebih dekat dengan masyarakat.</p>
     `,
   };
 
@@ -91,13 +87,12 @@ function ArticlePage() {
           <img
             src={article.image}
             alt={article.title}
-            className="w-full max-h-[600px] object-cover"
+            className="w-full max-h-[600px] object-cover object-top"
             loading="lazy"
           />
         </div>
 
-        <h2 className="text-2xl font-medium mb-1">{article.title}</h2>
-        <p className="text-gray-600 text-sm mb-6">{article.date}</p>
+        <h2 className="text-2xl font-medium mb-3">{article.title}</h2>
 
         <div
           className="prose max-w-none 
