@@ -40,7 +40,7 @@ function ArticlePage() {
       <h3>Komitmen Kami</h3>
       
       <p>CV Bejanaanugerah tidak hanya menawarkan ruang iklan, tetapi juga solusi komunikasi visual yang dapat membantu klien meraih tujuan pemasaran mereka. Kami percaya bahwa iklan luar ruang yang efektif mampu menciptakan kesan kuat, tahan lama, dan membangun brand image di benak audiens.</p>
-      
+
       <p>Dengan strategi penempatan yang tepat, CV Bejanaanugerah siap menjadi partner iklan luar ruang terpercaya untuk membawa brand Anda lebih dekat dengan masyarakat.</p>
     `,
   };
@@ -96,11 +96,11 @@ function ArticlePage() {
 
         <div
           className="prose max-w-none 
-            [&>p]:mb-6 [&>p]:leading-relaxed [&>p]:text-gray-700
-            [&>h1]:mt-8 [&>h1]:mb-4 [&>h2]:mt-8 [&>h2]:mb-4 [&>h3]:mt-6 [&>h3]:mb-3 
-            [&>h1]:font-semibold [&>h2]:font-semibold [&>h3]:font-semibold 
+            [&>p]:leading-relaxed [&>p]:text-gray-700 [&>p]:indent-6
+            [&>h1]:mt-8 [&>h1]:mb-4 [&>h2]:mt-8 [&>h2]:mb-4 [&>h3]:mt-6 [&>h3]:indent-6 [&>h3]:mb-6 
+            [&>h1]:font-semibold [&>h2]:font-semibold [&>h3]:text-xl [&>h3]:font-semibold 
             [&>h1]:text-gray-800 [&>h2]:text-gray-800 [&>h3]:text-gray-800
-            [&>ul]:mb-6 [&>ol]:mb-6 [&>ul]:pl-6 [&>ol]:pl-6
+            [&>ol]:mb-6 [&>ul]:pl-6 [&>ol]:pl-6
             [&>ul]:list-disc [&>ol]:list-decimal
             [&>li]:mb-2 [&>li]:leading-relaxed [&>li]:text-gray-700
             [&>strong]:font-semibold [&>strong]:text-gray-800
