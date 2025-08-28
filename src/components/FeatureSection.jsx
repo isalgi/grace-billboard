@@ -5,7 +5,7 @@ export default function FeaturesSection() {
         {/* Section Title */}
         <div className="text-center mb-16">
           <h2 className="text-[28px] font-medium text-[#1E1E1E] mb-4">
-            Mengapa beriklan di GraceBillboard ?
+            Mengapa beriklan di Bejanaanugerah ?
           </h2>
         </div>
 
@@ -20,10 +20,28 @@ export default function FeaturesSection() {
                 className="w-28 h-28 lg:w-32 lg:h-32"
               />
             </div>
-            <h3 className="text-gray-800 mb-4" style={{fontWeight: 500, fontSize: '24px', lineHeight: '100%', letterSpacing: '0%', textAlign: 'center'}}>
+            <h3
+              className="text-gray-800 mb-4"
+              style={{
+                fontWeight: 500,
+                fontSize: "24px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                textAlign: "center",
+              }}
+            >
               Beragam Jenis <br /> Media
             </h3>
-            <p className="text-[#323232]" style={{fontWeight: 500, fontSize: '14px', lineHeight: '100%', letterSpacing: '0%', textAlign: 'center'}}>
+            <p
+              className="text-[#323232]"
+              style={{
+                fontWeight: 500,
+                fontSize: "14px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                textAlign: "center",
+              }}
+            >
               Pilihan kategori media promosi <br /> indoor maupun outdoor
             </p>
           </div>
@@ -37,10 +55,28 @@ export default function FeaturesSection() {
                 className="w-28 h-28 lg:w-32 lg:h-32"
               />
             </div>
-            <h3 className="text-gray-800 mb-4" style={{fontWeight: 500, fontSize: '24px', lineHeight: '100%', letterSpacing: '0%', textAlign: 'center'}}>
+            <h3
+              className="text-gray-800 mb-4"
+              style={{
+                fontWeight: 500,
+                fontSize: "24px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                textAlign: "center",
+              }}
+            >
               Harga Bisa <br /> disesuaikan
             </h3>
-            <p className="text-[#323232]" style={{fontWeight: 500, fontSize: '14px', lineHeight: '100%', letterSpacing: '0%', textAlign: 'center'}}>
+            <p
+              className="text-[#323232]"
+              style={{
+                fontWeight: 500,
+                fontSize: "14px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                textAlign: "center",
+              }}
+            >
               Harga Sewa Billboard Spesial Cukup <br /> ajukan penawaran <br />
               anda.
             </p>
@@ -55,10 +91,28 @@ export default function FeaturesSection() {
                 className="w-28 h-28 lg:w-32 lg:h-32"
               />
             </div>
-            <h3 className="text-gray-800 mb-4" style={{fontWeight: 500, fontSize: '24px', lineHeight: '100%', letterSpacing: '0%', textAlign: 'center'}}>
+            <h3
+              className="text-gray-800 mb-4"
+              style={{
+                fontWeight: 500,
+                fontSize: "24px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                textAlign: "center",
+              }}
+            >
               Garansi pasti <br /> Tayang
             </h3>
-            <p className="text-[#323232]" style={{fontWeight: 500, fontSize: '14px', lineHeight: '100%', letterSpacing: '0%', textAlign: 'center'}}>
+            <p
+              className="text-[#323232]"
+              style={{
+                fontWeight: 500,
+                fontSize: "14px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                textAlign: "center",
+              }}
+            >
               Apabila tidak tayang jaminan <br /> uang kembali 100%.
             </p>
           </div>

@@ -44,7 +44,7 @@ function ServicesSection() {
           JABODETABEK
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-6">
           {services.slice(0, 3).map((service, index) => (
             <div key={index} className="h-full">
               <ServiceCard
@@ -56,7 +56,7 @@ function ServicesSection() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-xl mx-auto mb-8 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-xl mx-auto mb-8 ">
           {services.slice(3).map((service, index) => (
             <div key={index + 3} className="h-full">
               <ServiceCard
@@ -69,8 +69,8 @@ function ServicesSection() {
         </div>
 
         <div className="text-center">
-          <h3 className="text-lg font-medium mb-3 text-black">Jakarta</h3>
-          <button className="bg-[#0C098C] text-white px-6 py-2 rounded-lg text-sm hover:bg-[#0A0678] transition-colors">
+          <h3 className="text-2xl font-bold mb-7 text-[#0C098C]">Jakarta</h3>
+          <button className="bg-[#0C098C] text-white px-16 py-2 rounded-sm text-sm hover:bg-[#0A0678] transition-colors">
             Kontak Kami
           </button>
         </div>
