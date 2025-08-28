@@ -108,7 +108,7 @@ function ContactSection() {
         </div>
         <div className="flex-1">
           <img
-            src="./contact-grace.jpg"
+            src="/contact-grace.jpg"
             className="w-full h-full object-cover max-h-[560px] pl-24"
             alt="Person's hand reaching out of the water"
           />
