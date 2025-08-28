@@ -30,7 +30,7 @@ function LocationPage({
               <h1 className="text-[#0C098C] text-[40px] leading-10 font-bold mb-6">
                 {title}
               </h1>
-              <p className="text-gray-700 text-lg leading-relaxed mb-8">
+              <p className="text-gray-700 text-[16px] leading-[21px] mb-8">
                 {description}
               </p>
               <Link to="https://wa.me/6281239336293">

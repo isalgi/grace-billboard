@@ -17,7 +17,7 @@ function ServiceCard({ image, title, description, link }) {
         {title}
       </h3>
       <p
-        className={`text-[#000000] mb-3 px-1 py-3 text-left leading-[18px] text-[14px] 
+        className={`text-[#000000] mb-3 px-1 py-5 text-left leading-[18px] text-[14px] 
         }`}
       >
         {description}
