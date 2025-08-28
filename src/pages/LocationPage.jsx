@@ -27,11 +27,11 @@ function LocationPage({
               <h1 className="text-[#0C098C] text-[40px] leading-10 font-bold mb-6">
                 {title}
               </h1>
-              <p className="text-gray-700 text-[16px] leading-[21px] mb-8">
+              <p className="text-[#000000] text-[16px] leading-[21px] mb-8 whitespace-pre-line">
                 {description}
               </p>
               <Link to="https://wa.me/6281239336293">
-                <button className="bg-white border border-[#0C098C] text-[#0C098C] hover:bg-blue-50 rounded-md px-6 py-3 text-lg font-medium cursor-pointer">
+                <button className="bg-white border border-[#0C098C] text-[#0C098C] hover:bg-blue-50 rounded-md px-8 py-2 text-lg font-medium cursor-pointer">
                   Hubungi Kami
                 </button>
               </Link>
@@ -128,7 +128,7 @@ function LocationPage({
                       className="w-full h-[300px] object-cover"
                     />
                   </div>
-                  <h3 className="text-sm font-medium text-gray-800 group-hover:text-[#1196A9] transition-colors mt-3">
+                  <h3 className="text-[20px] font-medium text-[#000000]  transition-colors mt-3">
                     {item.name}
                   </h3>
                 </Link>

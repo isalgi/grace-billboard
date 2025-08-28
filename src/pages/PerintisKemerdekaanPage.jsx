@@ -22,7 +22,10 @@ function PerintisKemerdekaanPage() {
   return (
     <LocationPage
       title="Jl. Perintis Kemerdekaan"
-      description="Berada di jalan protokol (Protokol B), depan Halte TransJakarta “Perintis Kemerdekaan”, terletak di seberang kampus ASMI, dekat dengan Mall Bella Terra; Konro Karebosi; Pallubasa Serigala; serta area ramai lainnya. View dari arah Cempaka Putih menuju Kelapa Gading/Pulo Gadung."
+      description={`Berada di jalan protokol (Protokol B), depan Halte TransJakarta "Perintis 
+        Kemerdekaan", terletak di seberang kampus ASMI, dekat dengan Mall Bella Terra; 
+        Konro Karebosi; Pallubasa Serigala; serta area ramai lainnya. View dari arah 
+        Cempaka Putih menuju Kelapa Gading/Pulo Gadung.`}
       mainImage="/src/assets/perintis/image-02.webp"
       videoThumbnail="/src/assets/perintis/image-11.webp"
       recommendations={recommendations}
