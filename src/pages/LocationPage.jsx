@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import ReviewsSection from "../components/ReviewsSection";
 import ContactSection from "../components/ContactSection";
@@ -8,11 +9,29 @@ function LocationPage({
   title,
   description,
   mainImage,
-  videoThumbnail,
+  carouselMainImage,
   recommendations = [],
   videoTime = "13:45",
   qrCode = true,
+  additionalImages = [],
 }) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const allImages = [carouselMainImage, ...additionalImages];
+
+  // Auto-scroll functionality
+  useEffect(() => {
+    if (allImages.length <= 1) return;
+
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % allImages.length);
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [allImages.length]);
+
+  const handleDotClick = (index) => {
+    setCurrentImageIndex(index);
+  };
   return (
     <>
       <Navigation isHome={false} />
@@ -54,13 +73,13 @@ function LocationPage({
             Penampakan dari arah lain
           </h2>
 
-          {/* Single Image with Overlay */}
+          {/* Image Carousel with Overlay */}
           <div className="max-w-lg mx-auto">
             <div className="relative">
               <img
-                src={videoThumbnail}
+                src={allImages[currentImageIndex]}
                 alt="Location preview"
-                className="w-full h-[500px] object-cover "
+                className="w-full h-[500px] object-cover transition-opacity duration-500"
               />
 
               {/* Bottom Overlay with Time and Location Info */}
@@ -94,12 +113,21 @@ function LocationPage({
             </div>
 
             {/* Navigation Dots */}
-            <div className="flex justify-center mt-6 space-x-2">
-              <div className="w-3 h-3 bg-[#0C098C] rounded-full"></div>
-              <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
-              <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
-              <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
-            </div>
+            {allImages.length > 1 && (
+              <div className="flex justify-center mt-6 space-x-2">
+                {allImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handleDotClick(index)}
+                    className={`w-3 h-3 rounded-full transition-colors ${
+                      index === currentImageIndex 
+                        ? "bg-[#0C098C]" 
+                        : "bg-gray-300 hover:bg-gray-400"
+                    }`}
+                  />
+                ))}
+              </div>
+            )}
 
             {/* Contact Button */}
             <div className="text-center mt-8">
