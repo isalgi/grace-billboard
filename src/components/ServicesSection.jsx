@@ -37,10 +37,10 @@ function ServicesSection() {
   return (
     <section className="py-12 bg-gray-50">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-center text-xl font-medium mb-1 text-black">
+        <h2 className="text-center text-[32px] font-medium mb-1 text-black">
           Available Area
         </h2>
-        <p className="text-center text-blue-700 font-medium mb-8 text-sm">
+        <p className="text-center text-[#0C098C] font-bold my-8 text-[28px]">
           JABODETABEK
         </p>
 
