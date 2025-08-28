@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
 
 export default function Navigation({ isHome = false }) {
+  const location = useLocation();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isInsideLeftColumn, setIsInsideLeftColumn] = useState(false);
   const [isInsideRightColumn, setIsInsideRightColumn] = useState(false);
@@ -22,9 +23,44 @@ export default function Navigation({ isHome = false }) {
     if (!isInsideLeftColumn && !isInsideRightColumn) {
       closeTimeoutRef.current = setTimeout(() => {
         setIsDropdownOpen(false);
-      }, 500);
+      }, 300);
     }
   };
+
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isDropdownOpen &&
+        !event.target.closest("[data-dropdown-container]")
+      ) {
+        closeDropdown();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isDropdownOpen]);
+
+  // Close dropdown on Escape key
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === "Escape" && isDropdownOpen) {
+        closeDropdown();
+      }
+    };
+
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [isDropdownOpen]);
 
   const handleLeftColumnEnter = () => {
     setIsInsideLeftColumn(true);
@@ -50,8 +86,8 @@ export default function Navigation({ isHome = false }) {
     if (isDropdownOpen && jabodetabekRef.current) {
       const rect = jabodetabekRef.current.getBoundingClientRect();
       setPortalPosition({
-        top: rect.top,
-        left: rect.right + 24, // 24px gap (ml-6)
+        top: rect.top + window.scrollY,
+        left: rect.right + 32, // 32px gap
       });
     }
   }, [isDropdownOpen]);
@@ -88,6 +124,7 @@ export default function Navigation({ isHome = false }) {
             className="relative"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            data-dropdown-container
           >
             <button className="text-white hover:text-gray-200 transition-colors font-medium flex items-center cursor-pointer">
               Layanan
@@ -108,11 +145,12 @@ export default function Navigation({ isHome = false }) {
 
             {/* Dropdown Menu - Left Box */}
             <div
-              className={`absolute left-0 mt-2 bg-white rounded-md shadow-2xl transition-all duration-300 border border-gray-100 ${
+              className={`absolute left-0 mt-2 bg-white rounded-md shadow-2xl border border-gray-100 ${
                 isDropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
               }`}
               onMouseEnter={handleLeftColumnEnter}
               onMouseLeave={handleLeftColumnLeave}
+              data-dropdown-container
             >
               <div className="p-6">
                 <div className="relative">
@@ -165,7 +203,7 @@ export default function Navigation({ isHome = false }) {
       {isDropdownOpen &&
         createPortal(
           <div
-            className="fixed z-50 bg-white rounded-md shadow-2xl border border-gray-100 p-8"
+            className="absolute z-50 bg-white rounded-md shadow-2xl border border-gray-100 p-8"
             style={{
               top: `${portalPosition.top - 24}px`,
               left: `${portalPosition.left}px`,
@@ -173,6 +211,7 @@ export default function Navigation({ isHome = false }) {
             }}
             onMouseEnter={handleRightColumnEnter}
             onMouseLeave={handleRightColumnLeave}
+            data-dropdown-container
           >
             <div className="space-y-8">
               <div className="relative">
@@ -184,7 +223,13 @@ export default function Navigation({ isHome = false }) {
                   <br />
                   Kemerdekaan
                 </Link>
-                <div className="h-px bg-[#0C098C] w-full mt-3"></div>
+                <div
+                  className={`h-px w-full mt-3 ${
+                    location.pathname === "/lokasi/perintis-kemerdekaan"
+                      ? "bg-[#0C098C]"
+                      : "bg-transparent"
+                  }`}
+                ></div>
               </div>
 
               <div className="relative">
@@ -196,6 +241,13 @@ export default function Navigation({ isHome = false }) {
                   <br />
                   Cempaka Putih
                 </Link>
+                <div
+                  className={`h-px w-full mt-3 ${
+                    location.pathname === "/lokasi/cempaka-putih"
+                      ? "bg-[#0C098C]"
+                      : "bg-transparent"
+                  }`}
+                ></div>
               </div>
 
               <div className="relative">
@@ -207,6 +259,13 @@ export default function Navigation({ isHome = false }) {
                   <br />
                   Raya
                 </Link>
+                <div
+                  className={`h-px w-full mt-3 ${
+                    location.pathname === "/lokasi/matraman-raya"
+                      ? "bg-[#0C098C]"
+                      : "bg-transparent"
+                  }`}
+                ></div>
               </div>
 
               <div className="relative">
@@ -218,6 +277,13 @@ export default function Navigation({ isHome = false }) {
                   <br />
                   Pulo Gadung
                 </Link>
+                <div
+                  className={`h-px w-full mt-3 ${
+                    location.pathname === "/lokasi/bekasi-pulogadung"
+                      ? "bg-[#0C098C]"
+                      : "bg-transparent"
+                  }`}
+                ></div>
               </div>
 
               <div className="relative">
@@ -229,6 +295,13 @@ export default function Navigation({ isHome = false }) {
                   <br />
                   Kacang Raya
                 </Link>
+                <div
+                  className={`h-px w-full mt-3 ${
+                    location.pathname === "/lokasi/kebon-kacang-raya"
+                      ? "bg-[#0C098C]"
+                      : "bg-transparent"
+                  }`}
+                ></div>
               </div>
             </div>
           </div>,
