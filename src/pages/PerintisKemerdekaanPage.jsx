@@ -34,7 +34,6 @@ function PerintisKemerdekaanPage() {
       additionalImages={additionalImages}
       recommendations={recommendations}
       videoTime="16:41"
-      price="IDR 680.000"
     />
   );
 }

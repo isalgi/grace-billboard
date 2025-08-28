@@ -24,11 +24,7 @@ function MatramanJayaPage() {
     },
   ];
 
-  const additionalImages = [
-    "",
-    "",
-    ""
-  ];
+  const additionalImages = ["", "", ""];
 
   return (
     <LocationPage
@@ -42,7 +38,6 @@ function MatramanJayaPage() {
       additionalImages={additionalImages}
       recommendations={recommendations}
       videoTime="16:14"
-      price="IDR 700.000"
     />
   );
 }

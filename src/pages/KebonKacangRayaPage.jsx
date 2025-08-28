@@ -24,11 +24,7 @@ function KebonKacangRayaPage() {
     },
   ];
 
-  const additionalImages = [
-    "",
-    "",
-    ""
-  ];
+  const additionalImages = ["", "", ""];
 
   return (
     <LocationPage
@@ -42,7 +38,6 @@ function KebonKacangRayaPage() {
       additionalImages={additionalImages}
       recommendations={recommendations}
       videoTime="13:45"
-      price="IDR 650.000"
     />
   );
 }

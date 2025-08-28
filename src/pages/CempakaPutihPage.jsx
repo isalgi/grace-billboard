@@ -24,11 +24,7 @@ function CempakaPutihPage() {
     },
   ];
 
-  const additionalImages = [
-    "",
-    "",
-    ""
-  ];
+  const additionalImages = ["", "", ""];
 
   return (
     <LocationPage
@@ -43,7 +39,6 @@ function CempakaPutihPage() {
       additionalImages={additionalImages}
       recommendations={recommendations}
       videoTime="02:20"
-      price="IDR 850.000"
     />
   );
 }
