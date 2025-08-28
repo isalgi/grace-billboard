@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import ReviewsSection from "../components/ReviewsSection";
 import ContactSection from "../components/ContactSection";
@@ -6,6 +7,9 @@ import Footer from "../components/Footer";
 import ServiceCard from "../components/ServiceCard";
 
 function ArticlePage() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageSrc, setImageSrc] = useState("");
+
   // Mock article data - in a real app this would come from props or API
   const article = {
     title: "Best billboard spot you can find",
@@ -45,6 +49,16 @@ function ArticlePage() {
     `,
   };
 
+  // Preload and cache image
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      setImageSrc(article.image);
+      setImageLoaded(true);
+    };
+    img.src = article.image;
+  }, [article.image]);
+
   return (
     <>
       <Navigation isHome={false} />
@@ -56,12 +70,18 @@ function ArticlePage() {
 
         {/* Image container with full width */}
         <div className="w-full overflow-hidden rounded-lg mb-6">
-          <img
-            src={article.image}
-            alt={article.title}
-            className="w-full max-h-[600px] object-cover object-top"
-            loading="lazy"
-          />
+          {imageLoaded ? (
+            <img
+              src={imageSrc}
+              alt={article.title}
+              className="w-full max-h-[600px] object-cover object-top"
+              loading="lazy"
+            />
+          ) : (
+            <div className="w-full h-[400px] bg-gray-200 flex items-center justify-center">
+              <div className="text-gray-500">Loading...</div>
+            </div>
+          )}
         </div>
 
         <h2 className="text-2xl font-medium mb-3">{article.title}</h2>

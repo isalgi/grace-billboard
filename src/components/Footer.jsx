@@ -96,9 +96,7 @@ function Footer() {
         <div className="flex flex-col gap-4 items-start">
           <h3 className="text-xl font-semibold text-[#0C098C]">Ask Now</h3>
           <a
-            href="https://wa.me/6281239336293"
-            target="_blank"
-            rel="noopener noreferrer"
+            href=""
             className="hover:opacity-80 transition-opacity"
           >
             <svg
