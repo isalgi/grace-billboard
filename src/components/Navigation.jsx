@@ -20,8 +20,8 @@ export default function Navigation({ isHome = false }) {
     if (!isDropdownOpen && layananButtonRef.current) {
       const rect = layananButtonRef.current.getBoundingClientRect();
       setDropdownPosition({
-        top: rect.bottom + window.scrollY + 8,
-        left: rect.left + window.scrollX,
+        top: rect.bottom + 8,
+        left: rect.left,
       });
     }
     setIsDropdownOpen(!isDropdownOpen);
@@ -66,12 +66,42 @@ export default function Navigation({ isHome = false }) {
     return () => document.removeEventListener("keydown", handleEscape);
   }, [isDropdownOpen]);
 
+  // Update dropdown positions on scroll
+  useEffect(() => {
+    const updatePositions = () => {
+      if (isDropdownOpen && layananButtonRef.current) {
+        const rect = layananButtonRef.current.getBoundingClientRect();
+        setDropdownPosition({
+          top: rect.bottom + 8,
+          left: rect.left,
+        });
+        
+        if (isRightColumnOpen) {
+          setRightDropdownPosition({
+            top: rect.bottom + 8,
+            left: rect.right + 160,
+          });
+        }
+      }
+    };
+
+    if (isDropdownOpen) {
+      window.addEventListener("scroll", updatePositions);
+      window.addEventListener("resize", updatePositions);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", updatePositions);
+      window.removeEventListener("resize", updatePositions);
+    };
+  }, [isDropdownOpen, isRightColumnOpen]);
+
   const handleJabodetabekClick = () => {
     if (layananButtonRef.current) {
       const rect = layananButtonRef.current.getBoundingClientRect();
       setRightDropdownPosition({
-        top: rect.bottom + window.scrollY + 8,
-        left: rect.right + window.scrollX + 160,
+        top: rect.bottom + 8,
+        left: rect.right + 160,
       });
     }
     setIsRightColumnOpen(true);
