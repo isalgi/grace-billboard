@@ -78,12 +78,12 @@ export default function Navigation({ isHome = false }) {
           >
             Beranda
           </Link>
-          <a
-            href="#tentang"
+          <Link
+            to="/artikel"
             className="text-white hover:text-gray-200 transition-colors font-medium"
           >
             Tentang Kami
-          </a>
+          </Link>
           <div
             className="relative"
             onMouseEnter={handleMouseEnter}
