@@ -4,22 +4,22 @@ function MatramanJayaPage() {
   const recommendations = [
     {
       name: "Jl. Ahmad Yani Cempaka Putih",
-      image: "/src/assets/image-14.webp",
+      image: "/src/assets/ahmad/image-01.webp",
       link: "/lokasi/cempaka-putih"
     },
     {
       name: "Jl. Matraman Raya", 
-      image: "/src/assets/image-15.webp",
+      image: "/src/assets/matraman/image-13.webp",
       link: "/lokasi/matraman-raya"
     },
     {
       name: "Jl. Raya Bekasi Pulo Gadung",
-      image: "/src/assets/image-16.webp", 
+      image: "/src/assets/raya/image-07.webp", 
       link: "/lokasi/bekasi-pulogadung"
     },
     {
       name: "Jl. Kebon Kacang Raya",
-      image: "/src/assets/image-01.webp",
+      image: "/src/assets/kebon/image-04.webp",
       link: "/lokasi/kebon-kacang-raya"
     }
   ];
@@ -28,8 +28,8 @@ function MatramanJayaPage() {
     <LocationPage
       title="Jl. Matraman Raya"
       description="Billboard strategis di Jl. Matraman Raya dengan posisi yang sangat visible dari berbagai arah. Lokasi komersial dengan density traffic tinggi yang ideal untuk campaign advertising Anda."
-      mainImage="/src/assets/image-07.webp"
-      videoThumbnail="/src/assets/image-08.webp"
+      mainImage="/src/assets/matraman/image-03.webp"
+      videoThumbnail="/src/assets/matraman/image-14.webp"
       recommendations={recommendations}
       videoTime="16:14"
       price="IDR 700.000"
