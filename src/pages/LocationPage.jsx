@@ -85,13 +85,19 @@ function LocationPage({
               />
 
               {/* Bottom Overlay with Time and Location Info */}
-              <div className="absolute bottom-0 left-0 right-0  text-white p-4 rounded-b-lg">
-                <div className="flex justify-between items-start">
+              <div className="absolute bottom-0 left-0 right-0  text-white p-6">
+                <div className="flex justify-between items-end">
                   <div className="flex-1">
-                    <div className="text-3xl font-bold mb-1">{videoTime}</div>
-                    <div className="text-sm mb-1">03 Mei 2025</div>
-                    <div className="text-sm mb-1">Sabtu</div>
-                    <div className="text-xs leading-tight">
+                    <div className="flex items-start gap-4 mb-3">
+                      <div className="text-6xl font-bold leading-none">
+                        {videoTime}
+                      </div>
+                      <div>
+                        <div className="text-lg">03 Mei 2025</div>
+                        <div className="text-lg">Sabtu</div>
+                      </div>
+                    </div>
+                    <div className="text-sm leading-relaxed max-w-xs">
                       Cemp. Putih Tim., Kec. Cemp. Putih,
                       <br />
                       Kota Jakarta Pusat, Daerah Khusus
@@ -100,13 +106,17 @@ function LocationPage({
                     </div>
                   </div>
 
-                  {/* Map/QR Code */}
+                  {/* Map */}
                   {qrCode && (
-                    <div className="w-20 h-16 bg-gray-300 rounded ml-4 flex items-center justify-center">
-                      <div className="text-xs text-gray-600 text-center">
-                        Google
-                        <br />
-                        Maps
+                    <div className="w-32 h-24 bg-blue-900 rounded-lg ml-6 overflow-hidden flex items-center justify-center relative">
+                      <div className="w-full h-full bg-gradient-to-br from-blue-800 to-blue-900 relative">
+                        {/* Simple map-like design */}
+                        <div className="absolute inset-2 border border-blue-300 rounded">
+                          <div className="w-2 h-2 bg-blue-400 rounded-full absolute top-2 left-2"></div>
+                          <div className="w-1 h-4 bg-blue-300 absolute top-4 left-3 transform rotate-45"></div>
+                          <div className="w-3 h-1 bg-blue-300 absolute bottom-2 right-2"></div>
+                          <div className="w-1 h-3 bg-blue-300 absolute bottom-3 right-4"></div>
+                        </div>
                       </div>
                     </div>
                   )}
