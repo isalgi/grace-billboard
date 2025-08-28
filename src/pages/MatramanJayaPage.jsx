@@ -2,27 +2,31 @@ import LocationPage from "./LocationPage";
 import mainImageSrc from "../assets/matraman/image-03.webp";
 import additionalImage1 from "../assets/matraman/image-13.webp";
 import additionalImage2 from "../assets/matraman/image-14.webp";
+import cempakaPutihImage from "../assets/ahmad/image-01.webp";
+import perintisImage from "../assets/perintis/image-02.webp";
+import bekasiImage from "../assets/raya/image-07.webp";
+import kebonKacangImage from "../assets/kebon/image-04.webp";
 
 function MatramanJayaPage() {
   const recommendations = [
     {
       name: "Jl. Ahmad Yani Cempaka Putih",
-      image: "",
+      image: cempakaPutihImage,
       link: "/lokasi/cempaka-putih",
     },
     {
       name: "Jl. Perintis Kemerdekaan",
-      image: "",
+      image: perintisImage,
       link: "/lokasi/perintis-kemerdekaan",
     },
     {
       name: "Jl. Raya Bekasi Pulo Gadung",
-      image: "",
+      image: bekasiImage,
       link: "/lokasi/bekasi-pulogadung",
     },
     {
       name: "Jl. Kebon Kacang Raya",
-      image: "",
+      image: kebonKacangImage,
       link: "/lokasi/kebon-kacang-raya",
     },
   ];
