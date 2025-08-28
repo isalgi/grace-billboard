@@ -77,8 +77,8 @@ function ArticlePage() {
     <>
       <Navigation isHome={false} />
 
-      <div className="container mx-auto px-5 md:px-10 lg:px-20 py-8 pt-32">
-        <h1 className="text-[48px] text-[#0C098C] mb-6 font-semibold">
+      <div className="container mx-auto py-12">
+        <h1 className="text-[48px] text-[#0C098C] mb-10 font-semibold">
           Tentang CV Bejanaanugerah
         </h1>
 
