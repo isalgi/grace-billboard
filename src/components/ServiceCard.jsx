@@ -22,9 +22,12 @@ function ServiceCard({ image, title, description, link }) {
       >
         {description}
       </p>
-      <button className="bg-[#0C098C] text-white px-20 py-2 mb-5 rounded-md text-[14px] leading-[21px] font-medium hover:bg-[#0A0678] transition-colors mt-auto self-center cursor-pointer">
+      <a 
+        href={link} 
+        className="bg-[#0C098C] text-white px-20 py-2 mb-5 rounded-md text-[14px] leading-[21px] font-medium hover:bg-[#0A0678] transition-colors mt-auto self-center cursor-pointer inline-block text-center"
+      >
         Buka Area
-      </button>
+      </a>
     </div>
   );
 }
