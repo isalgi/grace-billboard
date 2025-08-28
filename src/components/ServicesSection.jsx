@@ -70,7 +70,7 @@ function ServicesSection() {
 
         <div className="text-center">
           <h3 className="text-2xl font-bold mb-7 text-[#0C098C]">Jakarta</h3>
-          <button className="bg-[#0C098C] text-white px-16 py-2 rounded-sm text-sm hover:bg-[#0A0678] transition-colors">
+          <button className="bg-[#0C098C] text-white px-16 py-2 rounded-sm text-sm hover:bg-[#0A0678] transition-colors cursor-pointer">
             Kontak Kami
           </button>
         </div>
