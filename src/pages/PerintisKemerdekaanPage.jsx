@@ -1,5 +1,7 @@
 import LocationPage from "./LocationPage";
 import mainImageSrc from "../assets/perintis/image-02.webp";
+import additionalImage1 from "../assets/perintis/image-11.webp";
+import additionalImage2 from "../assets/perintis/image-16.webp";
 
 function PerintisKemerdekaanPage() {
   const recommendations = [
@@ -18,9 +20,14 @@ function PerintisKemerdekaanPage() {
       image: "",
       link: "/lokasi/bekasi-pulogadung",
     },
+    {
+      name: "Jl. Kebon Kacang Raya",
+      image: "",
+      link: "/lokasi/kebon-kacang-raya",
+    },
   ];
 
-  const additionalImages = ["", "", ""];
+  const additionalImages = [mainImageSrc, additionalImage1, additionalImage2];
 
   return (
     <LocationPage

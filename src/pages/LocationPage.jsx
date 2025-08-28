@@ -16,7 +16,7 @@ function LocationPage({
   additionalImages = [],
 }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const allImages = [carouselMainImage, ...additionalImages];
+  const allImages = carouselMainImage ? [carouselMainImage, ...additionalImages] : additionalImages;
 
   // Auto-scroll functionality
   useEffect(() => {
