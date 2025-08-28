@@ -6,15 +6,12 @@ import Footer from "../components/Footer";
 
 function LocationPage({
   title,
-  subtitle,
   description,
   mainImage,
   videoThumbnail,
   recommendations = [],
   videoTime = "13:45",
   qrCode = true,
-  price = "IDR 750.000",
-  features = [],
 }) {
   return (
     <>

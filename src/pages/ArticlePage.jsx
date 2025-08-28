@@ -45,34 +45,6 @@ function ArticlePage() {
     `,
   };
 
-  // Recommended locations data
-  const recommendedLocations = [
-    {
-      image: "/src/assets/raya/image-07.webp",
-      title: "Jl. Raya Bekasi Pulo Gadung",
-      description:
-        "Lokasi billboard strategis dengan traffic padat kendaraan setiap harinya. Area komersial dengan visibility tinggi.",
-      price: "IDR 750.000",
-      link: "/lokasi/bekasi-pulogadung",
-    },
-    {
-      image: "/src/assets/ahmad/image-01.webp",
-      title: "Jl. Ahmad Yani Cempaka Putih",
-      description:
-        "Billboard strategis di jalan protokol Jakarta dengan tingkat visibility yang sangat tinggi.",
-      price: "IDR 850.000",
-      link: "/lokasi/cempaka-putih",
-    },
-    {
-      image: "/src/assets/kebon/image-04.webp",
-      title: "Jl. Kebon Kacang Raya",
-      description:
-        "Posisi billboard premium dengan akses mudah dan traffic tinggi. Area bisnis strategis.",
-      price: "IDR 650.000",
-      link: "/lokasi/kebon-kacang-raya",
-    },
-  ];
-
   return (
     <>
       <Navigation isHome={false} />
