@@ -148,11 +148,11 @@ export default function Navigation({ isHome = false }) {
               <div className="p-6">
                 <div className="relative">
                   <div
-                    className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors cursor-pointer"
+                    className="block text-gray-800 text-[14px] font-bold transition-colors cursor-pointer"
                     onClick={handleJabodetabekClick}
                   >
                     Jabodetabek
-                    <span className="text-gray-400 ml-2">></span>
+                    <span className="text-black font-bold ml-2">></span>
                   </div>
                   <div className="h-px bg-[#0C098C] w-full mt-3"></div>
                 </div>
@@ -162,7 +162,7 @@ export default function Navigation({ isHome = false }) {
             {/* Right Column Dropdown */}
             {isRightColumnOpen && (
               <div
-                className="absolute left-full top-8 ml-28 bg-white rounded-md shadow-2xl border border-gray-100 p-8 min-w-[280px]"
+                className="absolute left-full top-8 ml-20 bg-white rounded-md shadow-2xl border border-gray-100 p-8 min-w-[200px]"
                 onMouseEnter={handleRightColumnEnter}
                 onMouseLeave={handleRightColumnLeave}
                 data-dropdown-container
@@ -171,7 +171,7 @@ export default function Navigation({ isHome = false }) {
                   <div className="relative">
                     <Link
                       to="/lokasi/perintis-kemerdekaan"
-                      className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
+                      className="block text-gray-800 text-[14px] font-bold transition-colors leading-tight"
                     >
                       Jl. Perintis
                       <br />
@@ -189,7 +189,7 @@ export default function Navigation({ isHome = false }) {
                   <div className="relative">
                     <Link
                       to="/lokasi/cempaka-putih"
-                      className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
+                      className="block text-gray-800 text-[14px] font-bold transition-colors leading-tight"
                     >
                       Jl. Ahmad Yani
                       <br />
@@ -207,7 +207,7 @@ export default function Navigation({ isHome = false }) {
                   <div className="relative">
                     <Link
                       to="/lokasi/matraman-raya"
-                      className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
+                      className="block text-gray-800 text-[14px] font-bold transition-colors leading-tight"
                     >
                       Jl. Matraman
                       <br />
@@ -225,7 +225,7 @@ export default function Navigation({ isHome = false }) {
                   <div className="relative">
                     <Link
                       to="/lokasi/bekasi-pulogadung"
-                      className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
+                      className="block text-gray-800 text-[14px] font-bold transition-colors leading-tight"
                     >
                       Jl. Raya Bekasi
                       <br />
@@ -243,7 +243,7 @@ export default function Navigation({ isHome = false }) {
                   <div className="relative">
                     <Link
                       to="/lokasi/kebon-kacang-raya"
-                      className="block text-gray-800 hover:text-[#0C098C] text-lg font-medium transition-colors leading-tight"
+                      className="block text-gray-800 text-[14px] font-bold transition-colors leading-tight"
                     >
                       Jl. Kebon
                       <br />
