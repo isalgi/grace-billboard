@@ -41,11 +41,8 @@ function Footer() {
               </h3>
             </div>
             <p className="text-black leading-none tracking-normal text-sm font-normal">
-              Lorem ipsum dolor sit amet,
-              <br />
-              consectetur adipiscing elit. Nullam
-              <br />
-              tincidunt sit amet
+              Lorem ipsum dolor sit amet, consectetur adipiscing
+              <br /> elit. Nullam tincidunt sit amet
             </p>
           </div>
 
@@ -64,11 +61,8 @@ function Footer() {
               </h3>
             </div>
             <p className="text-black leading-none tracking-normal text-sm font-normal">
-              Lorem ipsum dolor sit amet,
-              <br />
-              consectetur adipiscing elit. Nullam
-              <br />
-              tincidunt sit amet
+              Lorem ipsum dolor sit amet, consectetur adipiscing
+              <br /> elit. Nullam tincidunt sit amet
             </p>
           </div>
         </div>
