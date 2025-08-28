@@ -96,7 +96,7 @@ function ArticlePage() {
             [&>ul]:list-disc [&>ol]:list-decimal
             [&>li]:mb-2 [&>li]:leading-relaxed [&>li]:text-gray-700
             [&>strong]:font-semibold [&>strong]:text-gray-800
-            [&>a]:text-cyan-600 [&>a]:hover:text-cyan-700 [&>a]:underline
+            [&>a]:text-cyan-600 [&>a]:underline
             [&_.article-image]:mb-6 [&_.article-image]:mt-6 [&_.article-image]:text-left
             [&_.article-image>img]:!w-auto [&_.article-image>img]:max-h-[400px] [&_.article-image>img]:h-auto
             [&_.article-image>img]:rounded-lg [&_.article-image>img]:!ml-0

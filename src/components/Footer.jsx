@@ -54,19 +54,19 @@ function Footer() {
           <div className="flex flex-col gap-3 font-semibold">
             <a
               href="#"
-              className="text-sm text-black hover:text-[#0C098C] transition-colors"
+              className="text-sm text-black transition-colors"
             >
               Lokasi
             </a>
             <a
               href="#"
-              className="text-sm text-black hover:text-[#0C098C] transition-colors"
+              className="text-sm text-black transition-colors"
             >
               Pemasangan
             </a>
             <a
               href="#"
-              className="text-sm text-black hover:text-[#0C098C] transition-colors"
+              className="text-sm text-black transition-colors"
             >
               Desain
             </a>
@@ -76,7 +76,7 @@ function Footer() {
         {/* Ask Now */}
         <div className="flex flex-col gap-4 items-start self-start">
           <h3 className="text-xl font-semibold text-[#0C098C]">Ask Now</h3>
-          <a href="" className="hover:opacity-80 transition-opacity">
+          <a href="" className="transition-opacity">
             <svg
               className="w-10 h-10 text-[#0C098C]"
               fill="currentColor"

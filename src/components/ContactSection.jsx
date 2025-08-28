@@ -268,7 +268,7 @@ function DatePickerField({ placeholder, required, value, onChange }) {
           onClick={() => handleDateSelect(day)}
           className={`h-8 w-8 rounded-full flex items-center justify-center text-sm
             ${isToday ? "bg-gray-200" : ""}
-            ${isSelected ? "bg-cyan-600 text-white" : "hover:bg-gray-100"}
+            ${isSelected ? "bg-cyan-600 text-white" : ""}
           `}
         >
           {day}
@@ -319,7 +319,7 @@ function DatePickerField({ placeholder, required, value, onChange }) {
             <button
               type="button"
               onClick={prevMonth}
-              className="p-1 hover:bg-gray-100 rounded-full"
+              className="p-1 rounded-full"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                 <path
@@ -337,7 +337,7 @@ function DatePickerField({ placeholder, required, value, onChange }) {
             <button
               type="button"
               onClick={nextMonth}
-              className="p-1 hover:bg-gray-100 rounded-full"
+              className="p-1 rounded-full"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                 <path
@@ -376,7 +376,7 @@ function DatePickerField({ placeholder, required, value, onChange }) {
                 setCurrentYear(today.getFullYear());
                 handleDateSelect(today.getDate());
               }}
-              className="text-sm text-cyan-600 hover:text-cyan-800"
+              className="text-sm text-cyan-600"
             >
               Today
             </button>

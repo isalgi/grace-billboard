@@ -74,19 +74,19 @@ export default function Navigation({ isHome = false }) {
         <div className="hidden md:flex items-center space-x-8">
           <Link
             to="/"
-            className="text-white hover:text-gray-200 transition-colors font-medium"
+            className="text-white transition-colors font-medium"
           >
             Beranda
           </Link>
           <Link
             to="/artikel"
-            className="text-white hover:text-gray-200 transition-colors font-medium"
+            className="text-white transition-colors font-medium"
           >
             Tentang Kami
           </Link>
           <div className="relative" data-dropdown-container>
             <button
-              className="text-white hover:text-gray-200 transition-colors font-medium flex items-center cursor-pointer"
+              className="text-white transition-colors font-medium flex items-center cursor-pointer"
               onClick={handleLayananClick}
             >
               Layanan
@@ -228,7 +228,7 @@ export default function Navigation({ isHome = false }) {
           </div>
           <a
             href="#kontak"
-            className="text-white hover:text-gray-200 transition-colors font-medium"
+            className="text-white transition-colors font-medium"
           >
             Kontak
           </a>
@@ -236,7 +236,7 @@ export default function Navigation({ isHome = false }) {
 
         {/* Contact Button */}
         <Link to="">
-          <button className="bg-[#0C098C] text-white px-8 py-2 rounded hover:bg-[#0A0678] transition-colors font-medium cursor-pointer">
+          <button className="bg-[#0C098C] text-white px-8 py-2 rounded transition-colors font-medium cursor-pointer">
             Kontak Kami
           </button>
         </Link>

@@ -52,7 +52,7 @@ function LocationPage({
                 {description}
               </p>
               <Link to="https://wa.me/6281239336293">
-                <button className="bg-white border border-[#0C098C] text-[#0C098C] hover:bg-blue-50 rounded-md px-8 py-2 text-lg font-medium cursor-pointer">
+                <button className="bg-white border border-[#0C098C] text-[#0C098C] rounded-md px-8 py-2 text-lg font-medium cursor-pointer">
                   Hubungi Kami
                 </button>
               </Link>
@@ -141,7 +141,7 @@ function LocationPage({
                     className={`w-3 h-3 rounded-full transition-colors ${
                       index === currentImageIndex
                         ? "bg-[#0C098C]"
-                        : "bg-gray-300 hover:bg-gray-400"
+                        : "bg-gray-300"
                     }`}
                   />
                 ))}
@@ -151,7 +151,7 @@ function LocationPage({
             {/* Contact Button */}
             <div className="text-center mt-8">
               <Link to="https://wa.me/6281239336293">
-                <button className="bg-[#0C098C] text-white px-12 py-3 rounded-lg text-lg font-medium hover:bg-blue-800 transition-colors cursor-pointer">
+                <button className="bg-[#0C098C] text-white px-12 py-3 rounded-lg text-lg font-medium transition-colors cursor-pointer">
                   Kontak Kami
                 </button>
               </Link>
@@ -168,7 +168,7 @@ function LocationPage({
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
               {recommendations.map((item, index) => (
                 <Link key={index} to={item.link} className="group">
-                  <div className="bg-white rounded-3xl overflow-hidden hover:shadow-lg transition-shadow">
+                  <div className="bg-white rounded-3xl overflow-hidden transition-shadow">
                     <img
                       src={item.image}
                       alt={item.name}
