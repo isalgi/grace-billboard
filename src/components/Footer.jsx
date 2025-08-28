@@ -49,7 +49,7 @@ function Footer() {
         </div>
 
         {/* Services */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 self-start">
           <h3 className="text-xl font-semibold text-[#0C098C]">Services</h3>
           <div className="flex flex-col gap-3 font-semibold">
             <a
@@ -74,7 +74,7 @@ function Footer() {
         </div>
 
         {/* Ask Now */}
-        <div className="flex flex-col gap-4 items-start">
+        <div className="flex flex-col gap-4 items-start self-start">
           <h3 className="text-xl font-semibold text-[#0C098C]">Ask Now</h3>
           <a href="" className="hover:opacity-80 transition-opacity">
             <svg
