@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
+import { createPortal } from "react-dom";
 
 export default function Navigation({ isHome = false }) {
   const location = useLocation();
@@ -7,9 +8,22 @@ export default function Navigation({ isHome = false }) {
   const [isRightColumnOpen, setIsRightColumnOpen] = useState(false);
   const [isInsideLeftColumn, setIsInsideLeftColumn] = useState(false);
   const [isInsideRightColumn, setIsInsideRightColumn] = useState(false);
+  const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 });
+  const [rightDropdownPosition, setRightDropdownPosition] = useState({
+    top: 0,
+    left: 0,
+  });
   const closeTimeoutRef = useRef(null);
+  const layananButtonRef = useRef(null);
 
   const handleLayananClick = () => {
+    if (!isDropdownOpen && layananButtonRef.current) {
+      const rect = layananButtonRef.current.getBoundingClientRect();
+      setDropdownPosition({
+        top: rect.bottom + window.scrollY + 8,
+        left: rect.left + window.scrollX,
+      });
+    }
     setIsDropdownOpen(!isDropdownOpen);
     if (!isDropdownOpen) {
       setIsRightColumnOpen(false);
@@ -53,211 +67,234 @@ export default function Navigation({ isHome = false }) {
   }, [isDropdownOpen]);
 
   const handleJabodetabekClick = () => {
+    if (layananButtonRef.current) {
+      const rect = layananButtonRef.current.getBoundingClientRect();
+      setRightDropdownPosition({
+        top: rect.bottom + window.scrollY + 8,
+        left: rect.right + window.scrollX + 160,
+      });
+    }
     setIsRightColumnOpen(true);
   };
 
   return (
-    <nav
-      className={`relative z-20 px-12 py-4 ${!isHome ? "bg-[#2682BB]" : ""}`}
-    >
-      <div className="flex items-center justify-between">
-        {/* Logo */}
-        <Link to="/" className="flex items-center">
-          <img
-            src="/Bejanaanugerah 1.png"
-            alt="CV Bejanaanugerah Logo"
-            className="h-20 w-auto"
-          />
-        </Link>
+    <>
+      <nav
+        className={`relative z-20 px-12 py-4 ${!isHome ? "bg-[#2682BB]" : ""}`}
+      >
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link to="/" className="flex items-center">
+            <img
+              src="/Bejanaanugerah 1.png"
+              alt="CV Bejanaanugerah Logo"
+              className="h-20 w-auto"
+            />
+          </Link>
 
-        {/* Navigation Links */}
-        <div className="hidden md:flex items-center space-x-8">
-          <Link
-            to="/"
-            className="text-white transition-colors font-medium"
-          >
-            Beranda
-          </Link>
-          <Link
-            to="/artikel"
-            className="text-white transition-colors font-medium"
-          >
-            Tentang Kami
-          </Link>
-          <div className="relative" data-dropdown-container>
-            <button
-              className="text-white transition-colors font-medium flex items-center cursor-pointer"
-              onClick={handleLayananClick}
+          {/* Navigation Links */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-white transition-colors font-medium">
+              Beranda
+            </Link>
+            <Link
+              to="/artikel"
+              className="text-white transition-colors font-medium"
             >
-              Layanan
-              <svg
-                className="w-4 h-4 ml-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+              Tentang Kami
+            </Link>
+            <div className="relative" data-dropdown-container>
+              <button
+                ref={layananButtonRef}
+                className="text-white transition-colors font-medium flex items-center cursor-pointer"
+                onClick={handleLayananClick}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-
-            {/* Dropdown Menu - Left Box */}
-            <div
-              className={`absolute left-0 mt-2 bg-white rounded-md shadow-2xl border border-gray-100 ${
-                isDropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
-              }`}
-              data-dropdown-container
+                Layanan
+                <svg
+                  className="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+            </div>
+            <a
+              href="#kontak"
+              className="text-white transition-colors font-medium"
             >
-              <div className="p-6">
-                <div className="relative">
-                  <div
-                    className="block text-gray-800 text-[14px] font-bold transition-colors cursor-pointer"
-                    onClick={handleJabodetabekClick}
-                  >
-                    Jabodetabek
-                    <span className="text-black font-bold ml-2">></span>
-                  </div>
-                  <div className="h-px bg-[#0C098C] w-full mt-3"></div>
+              Kontak
+            </a>
+          </div>
+
+          {/* Contact Button */}
+          <Link to="">
+            <button className="bg-[#0C098C] text-white px-8 py-2 rounded transition-colors font-medium cursor-pointer">
+              Kontak Kami
+            </button>
+          </Link>
+
+          {/* Mobile menu button */}
+          <button className="md:hidden text-white">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+      {/* Portal for Left Dropdown */}
+      {isDropdownOpen &&
+        createPortal(
+          <div
+            className="fixed bg-white rounded-md shadow-2xl border border-gray-100 z-[9999] opacity-100 visible"
+            style={{
+              top: `${dropdownPosition.top}px`,
+              left: `${dropdownPosition.left}px`,
+            }}
+            data-dropdown-container
+          >
+            <div className="p-6">
+              <div className="relative">
+                <div
+                  className="block text-gray-800 text-[14px] font-bold transition-colors cursor-pointer"
+                  onClick={handleJabodetabekClick}
+                >
+                  Jabodetabek
+                  <span className="text-black font-bold ml-2">></span>
                 </div>
+                <div className="h-px bg-[#0C098C] w-full mt-3"></div>
               </div>
             </div>
+          </div>,
+          document.body
+        )}
 
-            {/* Right Column Dropdown */}
-            {isRightColumnOpen && (
-              <div
-                className="absolute left-full top-8 ml-20 bg-white rounded-md shadow-2xl border border-gray-100 p-6 min-w-[200px]"
-                data-dropdown-container
-              >
-                <div className="space-y-8">
-                  <div className="relative">
-                    <Link
-                      to="/lokasi/perintis-kemerdekaan"
-                      className="block text-gray-800 text-[14px] font-bold transition-colors leading-tight"
-                    >
-                      Jl. Perintis
-                      <br />
-                      Kemerdekaan
-                    </Link>
-                    <div
-                      className={`h-px w-full mt-3 ${
-                        location.pathname === "/lokasi/perintis-kemerdekaan"
-                          ? "bg-[#0C098C]"
-                          : "bg-transparent"
-                      }`}
-                    ></div>
-                  </div>
-
-                  <div className="relative">
-                    <Link
-                      to="/lokasi/cempaka-putih"
-                      className="block text-gray-800 text-[14px] font-bold transition-colors leading-tight"
-                    >
-                      Jl. Ahmad Yani
-                      <br />
-                      Cempaka Putih
-                    </Link>
-                    <div
-                      className={`h-px w-full mt-3 ${
-                        location.pathname === "/lokasi/cempaka-putih"
-                          ? "bg-[#0C098C]"
-                          : "bg-transparent"
-                      }`}
-                    ></div>
-                  </div>
-
-                  <div className="relative">
-                    <Link
-                      to="/lokasi/matraman-raya"
-                      className="block text-gray-800 text-[14px] font-bold transition-colors leading-tight"
-                    >
-                      Jl. Matraman
-                      <br />
-                      Raya
-                    </Link>
-                    <div
-                      className={`h-px w-full mt-3 ${
-                        location.pathname === "/lokasi/matraman-raya"
-                          ? "bg-[#0C098C]"
-                          : "bg-transparent"
-                      }`}
-                    ></div>
-                  </div>
-
-                  <div className="relative">
-                    <Link
-                      to="/lokasi/bekasi-pulogadung"
-                      className="block text-gray-800 text-[14px] font-bold transition-colors leading-tight"
-                    >
-                      Jl. Raya Bekasi
-                      <br />
-                      Pulo Gadung
-                    </Link>
-                    <div
-                      className={`h-px w-full mt-3 ${
-                        location.pathname === "/lokasi/bekasi-pulogadung"
-                          ? "bg-[#0C098C]"
-                          : "bg-transparent"
-                      }`}
-                    ></div>
-                  </div>
-
-                  <div className="relative">
-                    <Link
-                      to="/lokasi/kebon-kacang-raya"
-                      className="block text-gray-800 text-[14px] font-bold transition-colors leading-tight"
-                    >
-                      Jl. Kebon
-                      <br />
-                      Kacang Raya
-                    </Link>
-                    <div
-                      className={`h-px w-full mt-3 ${
-                        location.pathname === "/lokasi/kebon-kacang-raya"
-                          ? "bg-[#0C098C]"
-                          : "bg-transparent"
-                      }`}
-                    ></div>
-                  </div>
-                </div>
+      {/* Portal for Right Column Dropdown */}
+      {isRightColumnOpen &&
+        createPortal(
+          <div
+            className="fixed bg-white rounded-md shadow-2xl border border-gray-100 p-6 min-w-[200px] z-[9999]"
+            style={{
+              top: `${rightDropdownPosition.top}px`,
+              left: `${rightDropdownPosition.left - 80}px`,
+            }}
+            data-dropdown-container
+          >
+            <div className="space-y-8">
+              <div className="relative">
+                <Link
+                  to="/lokasi/perintis-kemerdekaan"
+                  className="block text-gray-800 text-[14px] font-bold transition-colors leading-tight"
+                  onClick={closeDropdown}
+                >
+                  Jl. Perintis
+                  <br />
+                  Kemerdekaan
+                </Link>
+                <div
+                  className={`h-px w-full mt-3 ${
+                    location.pathname === "/lokasi/perintis-kemerdekaan"
+                      ? "bg-[#0C098C]"
+                      : "bg-transparent"
+                  }`}
+                ></div>
               </div>
-            )}
-          </div>
-          <a
-            href="#kontak"
-            className="text-white transition-colors font-medium"
-          >
-            Kontak
-          </a>
-        </div>
 
-        {/* Contact Button */}
-        <Link to="">
-          <button className="bg-[#0C098C] text-white px-8 py-2 rounded transition-colors font-medium cursor-pointer">
-            Kontak Kami
-          </button>
-        </Link>
+              <div className="relative">
+                <Link
+                  to="/lokasi/cempaka-putih"
+                  className="block text-gray-800 text-[14px] font-bold transition-colors leading-tight"
+                  onClick={closeDropdown}
+                >
+                  Jl. Ahmad Yani
+                  <br />
+                  Cempaka Putih
+                </Link>
+                <div
+                  className={`h-px w-full mt-3 ${
+                    location.pathname === "/lokasi/cempaka-putih"
+                      ? "bg-[#0C098C]"
+                      : "bg-transparent"
+                  }`}
+                ></div>
+              </div>
 
-        {/* Mobile menu button */}
-        <button className="md:hidden text-white">
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
-      </div>
-    </nav>
+              <div className="relative">
+                <Link
+                  to="/lokasi/matraman-raya"
+                  className="block text-gray-800 text-[14px] font-bold transition-colors leading-tight"
+                  onClick={closeDropdown}
+                >
+                  Jl. Matraman
+                  <br />
+                  Raya
+                </Link>
+                <div
+                  className={`h-px w-full mt-3 ${
+                    location.pathname === "/lokasi/matraman-raya"
+                      ? "bg-[#0C098C]"
+                      : "bg-transparent"
+                  }`}
+                ></div>
+              </div>
+
+              <div className="relative">
+                <Link
+                  to="/lokasi/bekasi-pulogadung"
+                  className="block text-gray-800 text-[14px] font-bold transition-colors leading-tight"
+                  onClick={closeDropdown}
+                >
+                  Jl. Raya Bekasi
+                  <br />
+                  Pulo Gadung
+                </Link>
+                <div
+                  className={`h-px w-full mt-3 ${
+                    location.pathname === "/lokasi/bekasi-pulogadung"
+                      ? "bg-[#0C098C]"
+                      : "bg-transparent"
+                  }`}
+                ></div>
+              </div>
+
+              <div className="relative">
+                <Link
+                  to="/lokasi/kebon-kacang-raya"
+                  className="block text-gray-800 text-[14px] font-bold transition-colors leading-tight"
+                  onClick={closeDropdown}
+                >
+                  Jl. Kebon
+                  <br />
+                  Kacang Raya
+                </Link>
+                <div
+                  className={`h-px w-full mt-3 ${
+                    location.pathname === "/lokasi/kebon-kacang-raya"
+                      ? "bg-[#0C098C]"
+                      : "bg-transparent"
+                  }`}
+                ></div>
+              </div>
+            </div>
+          </div>,
+          document.body
+        )}
+    </>
   );
 }
