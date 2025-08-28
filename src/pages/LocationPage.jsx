@@ -16,7 +16,9 @@ function LocationPage({
   additionalImages = [],
 }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const allImages = carouselMainImage ? [carouselMainImage, ...additionalImages] : additionalImages;
+  const allImages = carouselMainImage
+    ? [carouselMainImage, ...additionalImages]
+    : additionalImages;
 
   // Auto-scroll functionality
   useEffect(() => {
@@ -24,7 +26,7 @@ function LocationPage({
 
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % allImages.length);
-    }, 3000); // Change image every 3 seconds
+    }, 15000); // Change image every 15 seconds
 
     return () => clearInterval(interval);
   }, [allImages.length]);
@@ -120,8 +122,8 @@ function LocationPage({
                     key={index}
                     onClick={() => handleDotClick(index)}
                     className={`w-3 h-3 rounded-full transition-colors ${
-                      index === currentImageIndex 
-                        ? "bg-[#0C098C]" 
+                      index === currentImageIndex
+                        ? "bg-[#0C098C]"
                         : "bg-gray-300 hover:bg-gray-400"
                     }`}
                   />
