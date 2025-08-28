@@ -70,21 +70,21 @@ function ContactSection() {
   };
 
   return (
-    <section className="py-8 bg-gray-50">
-      <h2 className="text-3xl font-semibold text-center text-black mb-12">
+    <section id="kontak" className="py-8 sm:py-12 bg-gray-50">
+      <h2 className="text-2xl sm:text-3xl font-semibold text-center text-black mb-8 sm:mb-12">
         Butuh Bantuan ?
       </h2>
-      <div className="flex gap-12 px-16 pb-16 max-w-7xl mx-auto max-md:flex-col max-md:p-10 max-sm:p-5">
-        <div className="flex flex-col gap-8 flex-1">
-          <h2 className="text-7xl font-extrabold text-black max-sm:text-5xl">
+      <div className="flex gap-8 lg:gap-12 px-4 sm:px-6 lg:px-16 pb-8 sm:pb-12 lg:pb-16 max-w-7xl mx-auto max-lg:flex-col">
+        <div className="flex flex-col gap-6 sm:gap-8 flex-1">
+          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-black">
             Hubungi Kami
           </h2>
-          <p className="text-base text-black max-w-xl">
+          <p className="text-sm sm:text-base text-black max-w-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
             tincidunt sit amet lorem quis dignissim. Vivamus facilisis venenatis
             eros, id fringilla dolor iaculis quis. Donec quis purus leo.
           </p>
-          <form className="flex flex-col gap-7 mt-4 max-w-md">
+          <form className="flex flex-col gap-5 sm:gap-7 mt-4 max-w-md">
             <FormField placeholder="Nama Depan" required={true} />
             <FormField placeholder="Nama Belakang" required={true} />
             <FormField placeholder="Email" required={true} type="email" />
@@ -92,7 +92,6 @@ function ContactSection() {
 
             {/* React Select component for services */}
             <div className="relative">
-              {/* <label className="text-gray-400 text-lg absolute -top-7 left-0"></label> */}
               <Select
                 options={serviceOptions}
                 styles={customStyles}
@@ -109,7 +108,7 @@ function ContactSection() {
         <div className="flex-1">
           <img
             src="/contact-grace.jpg"
-            className="w-full h-full object-cover max-h-[560px] pl-24"
+            className="w-full h-full object-cover max-h-[400px] sm:max-h-[500px] lg:max-h-[560px] pl-0 sm:pl-12 lg:pl-24"
             alt="Person's hand reaching out of the water"
           />
         </div>

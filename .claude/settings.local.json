@@ -13,7 +13,8 @@
       "Read(c:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\.claude/**)",
       "Read(c:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\.claude/**)",
       "Read(c:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\.claude/**)",
-      "Read(c:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\.claude/**)"
+      "Read(c:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\.claude/**)",
+      "Bash(npm run dev:*)"
     ],
     "deny": [],
     "ask": []

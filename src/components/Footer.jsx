@@ -1,72 +1,72 @@
 function Footer() {
   return (
-    <footer className="px-20 pt-16 pb-10 bg-[#F6F6F6] max-sm:px-5 max-sm:py-10">
-      <div className="flex justify-between items-center mb-16 max-sm:flex-col gap-8 max-w-6xl mx-auto">
+    <footer className="px-4 sm:px-8 lg:px-20 pt-12 sm:pt-16 pb-8 sm:pb-10 bg-[#F6F6F6]">
+      <div className="flex justify-between items-start mb-12 sm:mb-16 max-lg:flex-col gap-6 sm:gap-8 max-w-6xl mx-auto">
         {/* Logo and Description */}
-        <div className="flex flex-col gap-4 max-w-[200px] justify-center">
+        <div className="flex flex-col gap-4 max-w-[200px] justify-center max-lg:items-center max-lg:max-w-none">
           <div className="flex items-center">
             <img
               src="/Bejanaanugerah 1.png"
               alt="CV Bejanaanugerah Logo"
-              className="h-24 w-auto"
+              className="h-20 sm:h-24 w-auto"
             />
           </div>
         </div>
 
         {/* Office Location and Contact us */}
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-6 sm:gap-8 max-lg:items-center max-lg:text-center">
           {/* Office Location */}
-          <div className="flex gap-2">
-            <span className="material-icons-outlined text-[#0C098C] text-xl mt-0.5 flex-shrink-0">
+          <div className="flex gap-2 max-lg:flex-col max-lg:items-center max-lg:gap-3">
+            <span className="material-icons-outlined text-[#0C098C] text-xl mt-0.5 flex-shrink-0 max-lg:mt-0">
               location_on
             </span>
-            <div className="flex flex-col gap-3">
-              <h3 className="text-xl font-semibold text-[#0C098C]">
+            <div className="flex flex-col gap-2 sm:gap-3">
+              <h3 className="text-lg sm:text-xl font-semibold text-[#0C098C]">
                 Office Location
               </h3>
-              <p className="text-black leading-none tracking-normal text-sm font-normal">
+              <p className="text-black leading-relaxed tracking-normal text-xs sm:text-sm font-normal">
                 Lorem ipsum dolor sit amet, consectetur adipiscing
-                <br /> elit. Nullam tincidunt sit amet
+                <br className="hidden sm:block" /> elit. Nullam tincidunt sit amet
               </p>
             </div>
           </div>
 
           {/* Contact us */}
-          <div className="flex gap-2">
-            <span className="material-icons-outlined text-[#0C098C] text-xl mt-0.5 flex-shrink-0">
+          <div className="flex gap-2 max-lg:flex-col max-lg:items-center max-lg:gap-3">
+            <span className="material-icons-outlined text-[#0C098C] text-xl mt-0.5 flex-shrink-0 max-lg:mt-0">
               call_end
             </span>
-            <div className="flex flex-col gap-3">
-              <h3 className="text-xl font-semibold text-[#0C098C]">
+            <div className="flex flex-col gap-2 sm:gap-3">
+              <h3 className="text-lg sm:text-xl font-semibold text-[#0C098C]">
                 Contact us
               </h3>
-              <p className="text-black leading-none tracking-normal text-sm font-normal">
+              <p className="text-black leading-relaxed tracking-normal text-xs sm:text-sm font-normal">
                 Lorem ipsum dolor sit amet, consectetur adipiscing
-                <br /> elit. Nullam tincidunt sit amet
+                <br className="hidden sm:block" /> elit. Nullam tincidunt sit amet
               </p>
             </div>
           </div>
         </div>
 
         {/* Services */}
-        <div className="flex flex-col gap-4 self-start">
-          <h3 className="text-xl font-semibold text-[#0C098C]">Services</h3>
-          <div className="flex flex-col gap-3 font-semibold">
+        <div className="flex flex-col gap-3 sm:gap-4 self-start max-lg:items-center">
+          <h3 className="text-lg sm:text-xl font-semibold text-[#0C098C]">Services</h3>
+          <div className="flex flex-col gap-2 sm:gap-3 font-semibold max-lg:items-center">
             <a
               href="#"
-              className="text-sm text-black transition-colors"
+              className="text-xs sm:text-sm text-black transition-colors"
             >
               Lokasi
             </a>
             <a
               href="#"
-              className="text-sm text-black transition-colors"
+              className="text-xs sm:text-sm text-black transition-colors"
             >
               Pemasangan
             </a>
             <a
               href="#"
-              className="text-sm text-black transition-colors"
+              className="text-xs sm:text-sm text-black transition-colors"
             >
               Desain
             </a>
@@ -74,11 +74,11 @@ function Footer() {
         </div>
 
         {/* Ask Now */}
-        <div className="flex flex-col gap-4 items-start self-start">
-          <h3 className="text-xl font-semibold text-[#0C098C]">Ask Now</h3>
+        <div className="flex flex-col gap-3 sm:gap-4 items-start self-start max-lg:items-center">
+          <h3 className="text-lg sm:text-xl font-semibold text-[#0C098C]">Ask Now</h3>
           <a href="" className="transition-opacity">
             <svg
-              className="w-10 h-10 text-[#0C098C]"
+              className="w-8 h-8 sm:w-10 sm:h-10 text-[#0C098C]"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -89,7 +89,7 @@ function Footer() {
       </div>
 
       {/* Copyright */}
-      <p className="text-xs text-center text-[#0C098C] leading-relaxed">
+      <p className="text-xs text-center text-[#0C098C] leading-relaxed px-4">
         Copyright ©2025 - PT. GRACE BILLBOARD. All right reserved. Liability
         limited by a scheme approved under Professional Standard Legislation.
       </p>

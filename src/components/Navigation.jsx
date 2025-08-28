@@ -8,6 +8,7 @@ export default function Navigation({ isHome = false }) {
   const [isRightColumnOpen, setIsRightColumnOpen] = useState(false);
   const [isInsideLeftColumn, setIsInsideLeftColumn] = useState(false);
   const [isInsideRightColumn, setIsInsideRightColumn] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 });
   const [rightDropdownPosition, setRightDropdownPosition] = useState({
     top: 0,
@@ -110,7 +111,7 @@ export default function Navigation({ isHome = false }) {
   return (
     <>
       <nav
-        className={`relative z-20 px-12 py-4 ${!isHome ? "bg-[#2682BB]" : ""}`}
+        className={`relative z-20 px-4 sm:px-6 lg:px-12 py-4 ${!isHome ? "bg-[#2682BB]" : ""}`}
       >
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -118,7 +119,7 @@ export default function Navigation({ isHome = false }) {
             <img
               src="/Bejanaanugerah 1.png"
               alt="CV Bejanaanugerah Logo"
-              className="h-20 w-auto"
+              className="h-16 sm:h-20 w-auto"
             />
           </Link>
 
@@ -163,30 +164,113 @@ export default function Navigation({ isHome = false }) {
             </a>
           </div>
 
-          {/* Contact Button */}
-          <Link to="">
-            <button className="bg-[#0C098C] text-white px-8 py-2 rounded transition-colors font-medium cursor-pointer">
-              Kontak Kami
-            </button>
-          </Link>
+          <div className="flex items-center space-x-4">
+            {/* Contact Button - Hidden on small screens */}
+            <Link to="" className="hidden sm:block">
+              <button className="bg-[#0C098C] text-white px-4 sm:px-8 py-2 rounded transition-colors font-medium cursor-pointer text-sm sm:text-base">
+                Kontak Kami
+              </button>
+            </Link>
 
-          {/* Mobile menu button */}
-          <button className="md:hidden text-white">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+            {/* Mobile menu button */}
+            <button 
+              className="md:hidden text-white"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                {isMobileMenuOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-[#2682BB] border-t border-blue-500">
+            <div className="px-6 py-4 space-y-4">
+              <Link 
+                to="/" 
+                className="block text-white font-medium py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Beranda
+              </Link>
+              <Link 
+                to="/artikel" 
+                className="block text-white font-medium py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Tentang Kami
+              </Link>
+              <div className="py-2">
+                <div className="text-white font-medium mb-2">Layanan</div>
+                <div className="ml-4 space-y-2">
+                  <Link 
+                    to="/lokasi/perintis-kemerdekaan" 
+                    className="block text-white text-sm py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Jl. Perintis Kemerdekaan
+                  </Link>
+                  <Link 
+                    to="/lokasi/cempaka-putih" 
+                    className="block text-white text-sm py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Jl. Ahmad Yani Cempaka Putih
+                  </Link>
+                  <Link 
+                    to="/lokasi/matraman-raya" 
+                    className="block text-white text-sm py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Jl. Matraman Raya
+                  </Link>
+                  <Link 
+                    to="/lokasi/bekasi-pulogadung" 
+                    className="block text-white text-sm py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Jl. Raya Bekasi Pulo Gadung
+                  </Link>
+                  <Link 
+                    to="/lokasi/kebon-kacang-raya" 
+                    className="block text-white text-sm py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Jl. Kebon Kacang Raya
+                  </Link>
+                </div>
+              </div>
+              <a 
+                href="#kontak" 
+                className="block text-white font-medium py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Kontak
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
       {/* Portal for Left Dropdown */}
       {isDropdownOpen &&

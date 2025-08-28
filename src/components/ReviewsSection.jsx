@@ -23,11 +23,11 @@ function ReviewsSection() {
   ];
 
   return (
-    <section className="px-0 py-10 bg-white ">
-      <h2 className="mb-4 text-3xl font-bold text-center text-[#0C098C]">
+    <section className="px-0 py-8 sm:py-10 bg-white">
+      <h2 className="mb-6 sm:mb-4 text-2xl sm:text-3xl font-bold text-center text-[#0C098C]">
         Review Kami
       </h2>
-      <div className="flex justify-between max-w-6xl mx-auto px-8 max-md:flex-col max-md:gap-10 max-md:items-center max-sm:px-5">
+      <div className="flex justify-between max-w-6xl mx-auto px-4 sm:px-5 lg:px-8 max-lg:flex-col max-lg:gap-8 max-lg:items-center">
         {reviews.map((review, index) => (
           <ReviewCard
             key={index}

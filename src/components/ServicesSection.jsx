@@ -40,16 +40,16 @@ function ServicesSection() {
   ];
 
   return (
-    <section className="py-12 bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-center text-[32px] font-medium mb-1 text-black">
+    <section className="py-8 sm:py-12 bg-gray-50">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-4">
+        <h2 className="text-center text-[24px] sm:text-[28px] lg:text-[32px] font-medium mb-1 text-black">
           Available Area
         </h2>
-        <p className="text-center text-[#0C098C] font-bold my-8 text-[28px]">
+        <p className="text-center text-[#0C098C] font-bold my-6 sm:my-8 text-[20px] sm:text-[24px] lg:text-[28px]">
           JABODETABEK
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-6">
           {services.slice(0, 3).map((service, index) => (
             <div key={index} className="h-full">
               <ServiceCard
@@ -62,7 +62,7 @@ function ServicesSection() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-xl mx-auto mb-8 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-sm sm:max-w-xl mx-auto mb-6 sm:mb-8">
           {services.slice(3).map((service, index) => (
             <div key={index + 3} className="h-full">
               <ServiceCard
@@ -76,8 +76,8 @@ function ServicesSection() {
         </div>
 
         <div className="text-center">
-          <h3 className="text-2xl font-bold mb-7 text-[#0C098C]">Jakarta</h3>
-          <button className="bg-[#0C098C] text-white px-16 py-2 rounded-sm text-sm transition-colors cursor-pointer">
+          <h3 className="text-xl sm:text-2xl font-bold mb-5 sm:mb-7 text-[#0C098C]">Jakarta</h3>
+          <button className="bg-[#0C098C] text-white px-8 sm:px-12 lg:px-16 py-2 rounded-sm text-sm sm:text-base transition-colors cursor-pointer">
             Kontak Kami
           </button>
         </div>
