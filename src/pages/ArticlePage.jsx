@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import ReviewsSection from "../components/ReviewsSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
-import ServiceCard from "../components/ServiceCard";
+import image06 from "../assets/image-06.webp";
 
 function ArticlePage() {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -13,7 +12,7 @@ function ArticlePage() {
   // Mock article data - in a real app this would come from props or API
   const article = {
     title: "Best billboard spot you can find",
-    image: "/src/assets/image-06.webp",
+    image: image06,
     content: `
       <p>CV Bejanaanugerah adalah perusahaan yang bergerak di bidang periklanan luar ruang (Out of Home Advertising) dengan fokus utama pada penyediaan media billboard premium di berbagai titik strategis. Sejak berdiri, kami berkomitmen untuk menjadi pinta terdepan di industri periklanan bagi brand, perusahaan, dan instansi dalam membangun visibilitas, meningkatkan brand citra, serta menjangkau audiens yang lebih luas.</p>
       
