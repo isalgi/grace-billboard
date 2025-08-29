@@ -17,7 +17,7 @@ const AppRoutes = () => {
         <Route path="/lokasi/bekasi-pulogadung" element={<BekasiPulogadungPage />} />
         <Route path="/lokasi/cempaka-putih" element={<CempakaPutihPage />} />
         <Route path="/lokasi/kebon-kacang-raya" element={<KebonKacangRayaPage />} />
-        <Route path="/lokasi/matraman-jaya" element={<MatramanJayaPage />} />
+        <Route path="/lokasi/matraman-raya" element={<MatramanJayaPage />} />
         <Route path="/lokasi/perintis-kemerdekaan" element={<PerintisKemerdekaanPage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
