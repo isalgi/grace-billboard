@@ -27,7 +27,7 @@ function ServicesSection() {
       title: "Jl. Matraman Raya",
       description:
         "Jl. Teritikad persisi di depan Soto Dunia Mas (Matraman), dekat dengan Mall Jakarta Kampung Jakarta, Kelurahan Utan Kayu Selatan, Kelurahan Utan Kayu Utara, Gramedia Matraman, Pasar Statium, dll. area pusat keramaian dan perkantoran. Memiliki kedataan pejalan jalan/kampung Melayu menuju Saldmbaya/Pumangi/Senen.",
-      link: "/lokasi/matraman-raya",
+      link: "/lokasi/matraman-jaya",
     },
     {
       image: image07,
