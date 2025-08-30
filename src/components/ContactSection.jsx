@@ -80,9 +80,8 @@ function ContactSection() {
             Hubungi Kami
           </h2>
           <p className="text-sm sm:text-base text-black max-w-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            tincidunt sit amet lorem quis dignissim. Vivamus facilisis venenatis
-            eros, id fringilla dolor iaculis quis. Donec quis purus leo.
+            Jika anda masih memiliki pertanyaan lebih lanjut seputar penyewaan
+            lokasi billboard kami, silahkan hubungi kami disini.
           </p>
           <form className="flex flex-col gap-5 sm:gap-7 mt-4 max-w-md">
             <FormField placeholder="Nama Depan" required={true} />

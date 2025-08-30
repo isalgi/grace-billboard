@@ -25,8 +25,9 @@ function Footer() {
                 Office Location
               </h3>
               <p className="text-black leading-relaxed tracking-normal text-xs sm:text-sm font-normal">
-                Lorem ipsum dolor sit amet, consectetur adipiscing
-                <br className="hidden sm:block" /> elit. Nullam tincidunt sit amet
+                Jln Poltangan Raya ,Gang L No 5 RT 01 RW 04
+                <br /> Kel Tanjung Barat, Kec Jagakarsa Ps minggu
+                <br /> Jakarta Selatan 12530
               </p>
             </div>
           </div>
@@ -41,8 +42,8 @@ function Footer() {
                 Contact us
               </h3>
               <p className="text-black leading-relaxed tracking-normal text-xs sm:text-sm font-normal">
-                Lorem ipsum dolor sit amet, consectetur adipiscing
-                <br className="hidden sm:block" /> elit. Nullam tincidunt sit amet
+                +62 811 1010 0899
+                <br className="hidden sm:block" /> +62 821 1003 5871
               </p>
             </div>
           </div>
@@ -50,7 +51,9 @@ function Footer() {
 
         {/* Services */}
         <div className="flex flex-col gap-3 sm:gap-4 self-start max-lg:items-center">
-          <h3 className="text-lg sm:text-xl font-semibold text-[#0C098C]">Services</h3>
+          <h3 className="text-lg sm:text-xl font-semibold text-[#0C098C]">
+            Services
+          </h3>
           <div className="flex flex-col gap-2 sm:gap-3 font-semibold max-lg:items-center">
             <a
               href="#"
@@ -75,7 +78,9 @@ function Footer() {
 
         {/* Ask Now */}
         <div className="flex flex-col gap-3 sm:gap-4 items-start self-start max-lg:items-center">
-          <h3 className="text-lg sm:text-xl font-semibold text-[#0C098C]">Ask Now</h3>
+          <h3 className="text-lg sm:text-xl font-semibold text-[#0C098C]">
+            Ask Now
+          </h3>
           <a href="" className="transition-opacity">
             <svg
               className="w-8 h-8 sm:w-10 sm:h-10 text-[#0C098C]"

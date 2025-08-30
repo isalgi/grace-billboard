@@ -3,22 +3,22 @@ import ReviewCard from "./ReviewCard";
 function ReviewsSection() {
   const reviews = [
     {
-      name: "John Doe",
-      company: "PT. LEBAH MADU",
+      name: "Rizal Danuarta",
+      company: "Bussiness Owner",
       review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit involuptate velit esse cillum dolore eu fugiat nulla pariatur",
+        "Lokasinya sangat strategis dan pelayanan pemasangannya sangat baik . Iklan saya berdampak langsung pada produk saya secara langsung setelah 2 mnggu pemasangan di titik-titik billboard ini. Sangat rekomendasi untuk pemasangan di titik-titik bejanaanugerah. Bintang 5 saya berikan.",
     },
     {
       name: "Rudi Tsu",
-      company: "PT. TERNAK LEBAH",
+      company: "Bussiness Owner",
       review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit involuptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur",
+        "Saya sangat puas dengan layanan Bejanaanugerah. Spot-spot billboardnya berada di jalur ramai sehingga iklan kami langsung terlihat banyak orang. Dalam hitungan minggu sudah terasa efeknya pada brand awareness kami. Pemasangan cepat dan rapi, sangat rekomendasi",
     },
     {
-      name: "Wong Fei Hong",
-      company: "PT. ELANG MENDARAT",
+      name: "Fei Tan",
+      company: "Bussiness Owner",
       review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
+        "Bejanaanugerah adalah pilihan terbaik untuk media luar ruang. Titik billboardnya berada di pusat keramaian, sehingga eksposur iklan sangat maksimal. Setelah pemasangan, respon pasar terhadap produk kami meningkat signifikan. Saya puas dan pasti akan pasang lagi",
     },
   ];
 
