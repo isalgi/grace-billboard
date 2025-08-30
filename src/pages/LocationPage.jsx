@@ -14,11 +14,15 @@ function LocationPage({
   videoTime = "13:45",
   qrCode = true,
   additionalImages = [],
+  overlayData = [],
 }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const allImages = carouselMainImage
     ? [carouselMainImage, ...additionalImages]
     : additionalImages;
+
+  // Get current overlay data from provided overlayData prop
+  const currentOverlayData = overlayData[currentImageIndex];
 
   // Auto-scroll functionality
   useEffect(() => {
@@ -96,20 +100,16 @@ function LocationPage({
                           transformOrigin: "left",
                         }}
                       >
-                        {videoTime}
+                        {currentOverlayData?.time}
                       </div>
                       <div className="w-[2px] sm:w-[3px] bg-yellow-400 h-8 sm:h-10 lg:h-12 mt-1 sm:mt-2 -ml-3 sm:-ml-6"></div>
                       <div className="ml-1 sm:ml-0">
-                        <div className="text-sm sm:text-base lg:text-lg">03 Mei 2025</div>
-                        <div className="text-sm sm:text-base lg:text-lg">Sabtu</div>
+                        <div className="text-sm sm:text-base lg:text-lg">{currentOverlayData?.date}</div>
+                        <div className="text-sm sm:text-base lg:text-lg">{currentOverlayData?.day}</div>
                       </div>
                     </div>
-                    <div className="text-xs sm:text-sm leading-relaxed max-w-[200px] sm:max-w-xs">
-                      Cemp. Putih Tim., Kec. Cemp. Putih,
-                      <br />
-                      Kota Jakarta Pusat, Daerah Khusus
-                      <br />
-                      Ibukota Jakarta
+                    <div className="text-xs sm:text-sm leading-relaxed max-w-[200px] sm:max-w-xs whitespace-pre-line">
+                      {currentOverlayData?.location}
                     </div>
                   </div>
 
@@ -117,7 +117,7 @@ function LocationPage({
                   {qrCode && (
                     <div className="w-24 h-28 sm:w-28 sm:h-32 lg:w-32 lg:h-36 rounded-lg ml-3 sm:ml-6 overflow-hidden">
                       <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d326.6310505273689!2d106.91190605458272!3d-6.257176725161578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sid!4v1756397665242!5m2!1sen!2sid"
+                        src={currentOverlayData?.mapUrl}
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
