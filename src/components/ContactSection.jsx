@@ -148,7 +148,7 @@ function ContactSection() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`py-3 px-6 rounded-lg font-medium transition-colors ${
+              className={`py-3 px-6 rounded-lg font-medium transition-colors cursor-pointer ${
                 isSubmitting
                   ? "bg-gray-400 cursor-not-allowed text-white"
                   : "bg-[#0C098C] hover:bg-[#0C098C] text-white"
