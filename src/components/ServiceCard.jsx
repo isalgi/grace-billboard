@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function ServiceCard({ image, title, description, link }) {
   return (
     <div className="bg-white rounded-[25px] shadow-sm p-3 sm:p-4 text-center flex flex-col h-full min-h-[500px] sm:min-h-[550px] lg:min-h-[600px]">
@@ -19,12 +21,12 @@ function ServiceCard({ image, title, description, link }) {
       <p className="text-[#000000] mb-3 px-1 py-3 sm:py-5 text-left leading-[16px] sm:leading-[18px] text-[13px] sm:text-[14px] flex-grow">
         {description}
       </p>
-      <a 
-        href={link} 
+      <Link
+        to={link}
         className="bg-[#0C098C] text-white px-8 sm:px-12 lg:px-20 py-2 mb-3 sm:mb-5 rounded-md text-[13px] sm:text-[14px] leading-[19px] sm:leading-[21px] font-medium transition-colors mt-auto self-center cursor-pointer inline-block text-center"
       >
         Buka Area
-      </a>
+      </Link>
     </div>
   );
 }
