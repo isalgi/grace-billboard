@@ -1,5 +1,6 @@
 // Route.jsx
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import HomePage from "../pages/HomePage";
 import ArticlePage from "../pages/ArticlePage";
 import BekasiPulogadungPage from "../pages/BekasiPulogadungPage";
@@ -9,6 +10,15 @@ import MatramanJayaPage from "../pages/MatramanJayaPage";
 import PerintisKemerdekaanPage from "../pages/PerintisKemerdekaanPage";
 
 const AppRoutes = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash && location.hash === '#kontak') {
+      return;
+    }
+    window.scrollTo(0, 0);
+  }, [location.pathname, location.hash]);
+
   return (
     <>
       <Routes>
