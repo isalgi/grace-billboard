@@ -82,7 +82,6 @@ function ServicesSection() {
         </div>
 
         <div className="text-center">
-          <h3 className="text-xl sm:text-2xl font-bold mb-5 sm:mb-7 text-[#0C098C]">Jakarta</h3>
           <button className="bg-[#0C098C] text-white px-8 sm:px-12 lg:px-16 py-2 rounded-sm text-sm sm:text-base transition-colors cursor-pointer">
             Kontak Kami
           </button>

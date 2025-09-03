@@ -95,7 +95,7 @@ function Footer() {
 
       {/* Copyright */}
       <p className="text-xs text-center text-[#0C098C] leading-relaxed px-4">
-        Copyright ©2025 - PT. GRACE BILLBOARD. All right reserved. Liability
+        Copyright ©2025 - CV. Bejanaanugerah. All right reserved. Liability
         limited by a scheme approved under Professional Standard Legislation.
       </p>
     </footer>
