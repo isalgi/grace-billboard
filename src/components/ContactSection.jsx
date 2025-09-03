@@ -32,6 +32,9 @@ function ContactSection() {
     setSubmitStatus(null);
 
     try {
+      // Log form data to check if it's being captured
+      console.log('Form data being sent:', formData);
+
       // EmailJS configuration
       const serviceId = "service_x89u8tp";
       const templateId = "template_b823tzk";
@@ -40,14 +43,13 @@ function ContactSection() {
       // Prepare template parameters
       const templateParams = {
         name: `${formData.firstName} ${formData.lastName}`,
-        from_name: formData.firstName,
-        last_name: formData.lastName,
-        from_email: formData.email,
-        phone: formData.phone,
-        service: formData.service,
         time: new Date().toLocaleString("id-ID"),
+        message: `From: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService: ${formData.service}`,
         to_name: "Bejanaanugerah",
       };
+
+      // Log template parameters to verify
+      console.log('Template parameters:', templateParams);
 
       // Send email using EmailJS
       const result = await emailjs.send(
