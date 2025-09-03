@@ -33,7 +33,7 @@ function ContactSection() {
 
     try {
       // Log form data to check if it's being captured
-      console.log('Form data being sent:', formData);
+      console.log("Form data being sent:", formData);
 
       // EmailJS configuration
       const serviceId = "service_x89u8tp";
@@ -49,7 +49,7 @@ function ContactSection() {
       };
 
       // Log template parameters to verify
-      console.log('Template parameters:', templateParams);
+      console.log("Template parameters:", templateParams);
 
       // Send email using EmailJS
       const result = await emailjs.send(
@@ -151,7 +151,7 @@ function ContactSection() {
               className={`py-3 px-6 rounded-lg font-medium transition-colors ${
                 isSubmitting
                   ? "bg-gray-400 cursor-not-allowed text-white"
-                  : "bg-cyan-600 hover:bg-cyan-700 text-white"
+                  : "bg-[#0C098C] hover:bg-[#0C098C] text-white"
               }`}
             >
               {isSubmitting ? "Mengirim..." : "Kirim Pesan"}
