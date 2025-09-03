@@ -1,6 +1,80 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 function ContactSection() {
+  const form = useRef();
+
+  // Form state
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    service: "",
+  });
+
+  // UI state
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
+
+  // Handle form input changes
+  const handleInputChange = (field, value) => {
+    setFormData((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      // EmailJS configuration
+      const serviceId = "service_x89u8tp";
+      const templateId = "template_b823tzk";
+      const publicKey = "RIEOb7R3_Drw5ZfM6";
+
+      // Prepare template parameters
+      const templateParams = {
+        name: `${formData.firstName} ${formData.lastName}`,
+        from_name: formData.firstName,
+        last_name: formData.lastName,
+        from_email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        time: new Date().toLocaleString("id-ID"),
+        to_name: "Bejanaanugerah",
+      };
+
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+
+      console.log("Email sent successfully:", result);
+      setSubmitStatus("success");
+
+      // Reset form after successful submission
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        service: "",
+      });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="kontak" className="py-8 sm:py-12 bg-gray-50">
@@ -16,14 +90,70 @@ function ContactSection() {
             Jika anda masih memiliki pertanyaan lebih lanjut seputar penyewaan
             lokasi billboard kami, silahkan hubungi kami disini.
           </p>
-          <form className="flex flex-col gap-5 sm:gap-7 mt-4 max-w-md">
-            <FormField placeholder="Nama Depan" required={true} />
-            <FormField placeholder="Nama Belakang" required={true} />
-            <FormField placeholder="Email" required={true} type="email" />
-            <FormField placeholder="Nomor Telepon" required={true} type="tel" />
+          {/* Success/Error Messages */}
+          {submitStatus === "success" && (
+            <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded max-w-md">
+              Terima kasih! Pesan Anda telah berhasil dikirim. Kami akan
+              merespons dalam 1 hari kerja.
+            </div>
+          )}
 
-            {/* Service text input */}
-            <FormField placeholder="Layanan apa yang Anda cari?" required={true} />
+          {submitStatus === "error" && (
+            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded max-w-md">
+              Maaf, terjadi kesalahan saat mengirim pesan Anda. Silakan coba
+              lagi atau hubungi kami langsung.
+            </div>
+          )}
+
+          <form
+            ref={form}
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-5 sm:gap-7 mt-4 max-w-md"
+          >
+            <FormField
+              placeholder="Nama Depan"
+              required={true}
+              value={formData.firstName}
+              onChange={(value) => handleInputChange("firstName", value)}
+            />
+            <FormField
+              placeholder="Nama Belakang"
+              required={true}
+              value={formData.lastName}
+              onChange={(value) => handleInputChange("lastName", value)}
+            />
+            <FormField
+              placeholder="Email"
+              required={true}
+              type="email"
+              value={formData.email}
+              onChange={(value) => handleInputChange("email", value)}
+            />
+            <FormField
+              placeholder="Nomor Telepon"
+              required={true}
+              type="tel"
+              value={formData.phone}
+              onChange={(value) => handleInputChange("phone", value)}
+            />
+            <FormField
+              placeholder="Layanan apa yang Anda cari?"
+              required={true}
+              value={formData.service}
+              onChange={(value) => handleInputChange("service", value)}
+            />
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className={`py-3 px-6 rounded-lg font-medium transition-colors ${
+                isSubmitting
+                  ? "bg-gray-400 cursor-not-allowed text-white"
+                  : "bg-cyan-600 hover:bg-cyan-700 text-white"
+              }`}
+            >
+              {isSubmitting ? "Mengirim..." : "Kirim Pesan"}
+            </button>
           </form>
         </div>
         <div className="flex-1">
@@ -38,52 +168,17 @@ function ContactSection() {
   );
 }
 
-function FormField({
-  placeholder,
-  required,
-  type = "text",
-  isDropdown = false,
-}) {
+function FormField({ placeholder, required, type = "text", value, onChange }) {
   return (
     <div className="relative">
-      {isDropdown ? (
-        <div className="relative">
-          <select
-            className="w-full py-2 pb-1.5 bg-transparent border-b border-gray-300 focus:border-cyan-600 focus:outline-none appearance-none pr-8 text-gray-400 text-lg"
-            required={required}
-          >
-            <option value="" disabled selected>
-              {placeholder} {required && "*"}
-            </option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-          </select>
-          <div className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="text-gray-400"
-            >
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </div>
-        </div>
-      ) : (
-        <input
-          type={type}
-          placeholder={`${placeholder}${required ? " *" : ""}`}
-          className="w-full py-2 pb-1.5 bg-transparent border-b border-gray-300 focus:border-cyan-600 focus:outline-none text-lg text-gray-400 placeholder-gray-400"
-          required={required}
-        />
-      )}
+      <input
+        type={type}
+        placeholder={`${placeholder}${required ? " *" : ""}`}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        className="w-full py-2 pb-1.5 bg-transparent border-b border-gray-300 focus:border-cyan-600 focus:outline-none text-lg text-black placeholder-gray-400"
+        required={required}
+      />
     </div>
   );
 }

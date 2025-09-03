@@ -1,20 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(node:*)",
-      "Bash(npm install:*)",
-      "Bash(del *.jpg)",
-      "Read(c:\\Users\\faish\\Documents\\dev-domain\\infinity-legal\\src\\pages\\Services/**)",
-      "Read(c:\\Users\\faish\\Documents\\dev-domain\\infinity-legal\\src\\pages\\News/**)",
-      "Read(c:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\.claude/**)",
-      "Read(c:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\.claude/**)",
-      "Read(c:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\.claude/**)",
-      "Read(c:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\.claude/**)",
-      "Read(c:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\.claude/**)",
-      "Read(c:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\.claude/**)",
-      "Read(c:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\.claude/**)",
-      "Read(c:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\.claude/**)",
-      "Bash(npm run dev:*)"
+      "Bash(npm install:*)"
     ],
     "deny": [],
     "ask": []
