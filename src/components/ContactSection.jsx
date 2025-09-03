@@ -1,73 +1,6 @@
 import { useState } from "react";
-import Select from "react-select";
 
 function ContactSection() {
-  const [selectedService, setSelectedService] = useState(null);
-
-  // Options for the service dropdown
-  const serviceOptions = [
-    { value: "service1", label: "Service 1" },
-    { value: "service2", label: "Service 2" },
-    { value: "service3", label: "Service 3" },
-  ];
-
-  // Custom styles for react-select
-  const customStyles = {
-    control: (provided) => ({
-      ...provided,
-      border: "none",
-      borderBottom: "1px solid #d1d5db",
-      borderRadius: 0,
-      boxShadow: "none",
-      backgroundColor: "transparent",
-      minHeight: "40px",
-      cursor: "pointer",
-      "&:hover": {
-        borderColor: "#0891b2",
-      },
-    }),
-    indicatorSeparator: () => ({
-      display: "none",
-    }),
-    placeholder: (provided) => ({
-      ...provided,
-      color: "#9ca3af",
-      fontSize: "1.125rem",
-    }),
-    input: (provided) => ({
-      ...provided,
-      color: "#6b7280",
-      fontSize: "1.125rem",
-    }),
-    singleValue: (provided) => ({
-      ...provided,
-      color: "#6b7280",
-      fontSize: "1.125rem",
-    }),
-    valueContainer: (provided) => ({
-      ...provided,
-      padding: "8px 0",
-    }),
-    menu: (provided) => ({
-      ...provided,
-      borderRadius: "0.375rem",
-      boxShadow:
-        "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-    }),
-    option: (provided, state) => ({
-      ...provided,
-      backgroundColor: state.isSelected
-        ? "#0891b2"
-        : state.isFocused
-        ? "#e0f2fe"
-        : null,
-      color: state.isSelected ? "white" : "#374151",
-      cursor: "pointer",
-      "&:active": {
-        // backgroundColor: "#0891b2",
-      },
-    }),
-  };
 
   return (
     <section id="kontak" className="py-8 sm:py-12 bg-gray-50">
@@ -89,19 +22,8 @@ function ContactSection() {
             <FormField placeholder="Email" required={true} type="email" />
             <FormField placeholder="Nomor Telepon" required={true} type="tel" />
 
-            {/* React Select component for services */}
-            <div className="relative">
-              <Select
-                options={serviceOptions}
-                styles={customStyles}
-                value={selectedService}
-                onChange={setSelectedService}
-                placeholder="Layanan apa yang Anda cari?"
-                className="react-select-container"
-                classNamePrefix="react-select"
-                required
-              />
-            </div>
+            {/* Service text input */}
+            <FormField placeholder="Layanan apa yang Anda cari?" required={true} />
           </form>
         </div>
         <div className="flex-1">
