@@ -166,11 +166,11 @@ export default function Navigation({ isHome = false }) {
 
           <div className="flex items-center space-x-4">
             {/* Contact Button - Hidden on small screens */}
-            <Link to="" className="hidden sm:block">
+            <a href="https://wa.me/6282110035871" target="_blank" rel="noopener noreferrer" className="hidden sm:block">
               <button className="bg-[#0C098C] text-white px-4 sm:px-8 py-2 rounded transition-colors font-medium cursor-pointer text-sm sm:text-base">
                 Kontak Kami
               </button>
-            </Link>
+            </a>
 
             {/* Mobile menu button */}
             <button 

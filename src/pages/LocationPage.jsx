@@ -55,11 +55,11 @@ function LocationPage({
               <p className="text-[#000000] text-[14px] sm:text-[16px] leading-[18px] sm:leading-[21px] mb-6 sm:mb-8 whitespace-pre-line">
                 {description}
               </p>
-              <Link to="https://wa.me/6281239336293">
+              <a href="https://wa.me/6282110035871" target="_blank" rel="noopener noreferrer">
                 <button className="bg-white border border-[#0C098C] text-[#0C098C] rounded-md px-6 sm:px-8 py-2 text-base sm:text-lg font-medium cursor-pointer">
                   Hubungi Kami
                 </button>
-              </Link>
+              </a>
             </div>
 
             {/* Right Column - Image */}
@@ -150,11 +150,11 @@ function LocationPage({
 
             {/* Contact Button */}
             <div className="text-center mt-6 sm:mt-8">
-              <Link to="https://wa.me/6281239336293">
+              <a href="https://wa.me/6282110035871" target="_blank" rel="noopener noreferrer">
                 <button className="bg-[#0C098C] text-white px-8 sm:px-12 py-2 sm:py-3 rounded-lg text-base sm:text-lg font-medium transition-colors cursor-pointer">
                   Kontak Kami
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

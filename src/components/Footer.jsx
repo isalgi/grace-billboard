@@ -81,7 +81,7 @@ function Footer() {
           <h3 className="text-lg sm:text-xl font-semibold text-[#0C098C]">
             Ask Now
           </h3>
-          <a href="" className="transition-opacity">
+          <a href="https://wa.me/6282110035871" target="_blank" rel="noopener noreferrer" className="transition-opacity">
             <svg
               className="w-8 h-8 sm:w-10 sm:h-10 text-[#0C098C]"
               fill="currentColor"

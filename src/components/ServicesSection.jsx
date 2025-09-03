@@ -82,9 +82,11 @@ function ServicesSection() {
         </div>
 
         <div className="text-center">
-          <button className="bg-[#0C098C] text-white px-8 sm:px-12 lg:px-16 py-2 rounded-sm text-sm sm:text-base transition-colors cursor-pointer">
-            Kontak Kami
-          </button>
+          <a href="https://wa.me/6282110035871" target="_blank" rel="noopener noreferrer">
+            <button className="bg-[#0C098C] text-white px-8 sm:px-12 lg:px-16 py-2 rounded-sm text-sm sm:text-base transition-colors cursor-pointer">
+              Kontak Kami
+            </button>
+          </a>
         </div>
       </div>
     </section>
