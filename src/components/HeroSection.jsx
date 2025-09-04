@@ -5,7 +5,7 @@ export default function HeroSection() {
     <div
       className="relative min-h-screen bg-gradient-to-br from-blue-600 to-blue-800"
       style={{
-        backgroundImage: `url("./bg-billboard-top.jpg")`,
+        backgroundImage: `url("/bg-billboard-top.jpg")`,
         backgroundSize: "cover", // Changed from "contain" to "cover"
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center top", // Better positioning

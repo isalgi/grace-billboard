@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(npm install:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Read(/C:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\public/**)",
+      "Read(/C:\\Users\\faish\\Documents\\dev-domain\\grace-billboard/**)",
+      "Read(/C:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\src\\assets/**)",
+      "Read(/C:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\src\\components/**)",
+      "Read(/C:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\src\\components/**)",
+      "Read(/C:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\src\\components/**)",
+      "Read(/C:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\src\\components/**)"
     ],
     "deny": [],
     "ask": []

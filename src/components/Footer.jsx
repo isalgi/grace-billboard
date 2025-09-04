@@ -6,7 +6,7 @@ function Footer() {
         <div className="flex flex-col gap-4 max-w-[200px] justify-center max-lg:items-center max-lg:max-w-none">
           <div className="flex items-center">
             <img
-              src="/Bejanaanugerah 1.png"
+              src="/favicon.png"
               alt="CV Bejanaanugerah Logo"
               className="h-20 sm:h-24 w-auto"
             />

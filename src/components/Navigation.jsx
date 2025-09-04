@@ -117,7 +117,7 @@ export default function Navigation({ isHome = false }) {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src="/Bejanaanugerah 1.png"
+              src="/favicon.png"
               alt="CV Bejanaanugerah Logo"
               className="h-16 sm:h-20 w-auto"
             />

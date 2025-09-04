@@ -15,7 +15,7 @@ export default function FeaturesSection() {
           <div className="text-center">
             <div className="flex justify-center mb-4 sm:mb-6">
               <img
-                src="./multimedia.png"
+                src="/multimedia.png"
                 alt="Beragam Jenis Media"
                 className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32"
               />
@@ -32,7 +32,7 @@ export default function FeaturesSection() {
           <div className="text-center">
             <div className="flex justify-center mb-4 sm:mb-6">
               <img
-                src="./best-price.png"
+                src="/best-price.png"
                 alt="Harga Bisa disesuaikan"
                 className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32"
               />
@@ -50,7 +50,7 @@ export default function FeaturesSection() {
           <div className="text-center">
             <div className="flex justify-center mb-4 sm:mb-6">
               <img
-                src="./guarantee.png"
+                src="/guarantee.png"
                 alt="Garansi pasti Tayang"
                 className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32"
               />
