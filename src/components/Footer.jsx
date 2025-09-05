@@ -1,9 +1,9 @@
 function Footer() {
   return (
-    <footer className="px-4 sm:px-8 lg:px-20 pt-12 sm:pt-16 pb-8 sm:pb-10 bg-[#F6F6F6]">
-      <div className="flex justify-between items-start mb-12 sm:mb-16 max-lg:flex-col gap-6 sm:gap-8 max-w-6xl mx-auto">
+    <footer className="px-4 sm:px-8 lg:px-20 pt-12 sm:pt-16 pb-8 sm:pb-10 bg-[#F6F6F6] text-center sm:text-left">
+      <div className="flex justify-center lg:justify-between items-center lg:items-start mb-12 sm:mb-16 flex-col lg:flex-row gap-6 sm:gap-8 max-w-6xl mx-auto">
         {/* Logo and Description */}
-        <div className="flex flex-col gap-4 max-w-[200px] justify-center max-lg:items-center max-lg:max-w-none">
+        <div className="flex flex-col gap-4 max-w-[200px] justify-center items-center lg:items-start lg:max-w-[200px] max-w-none">
           <div className="flex items-center">
             <img
               src="/favicon.webp"
@@ -14,10 +14,10 @@ function Footer() {
         </div>
 
         {/* Office Location and Contact us */}
-        <div className="flex flex-col gap-6 sm:gap-8 max-lg:items-center max-lg:text-center">
+        <div className="flex flex-col gap-6 sm:gap-8 items-center lg:items-start text-center lg:text-left">
           {/* Office Location */}
-          <div className="flex gap-2 max-lg:flex-col max-lg:items-center max-lg:gap-3">
-            <span className="material-icons-outlined text-[#0C098C] text-xl mt-0.5 flex-shrink-0 max-lg:mt-0">
+          <div className="flex gap-2 flex-col lg:flex-row items-center lg:items-start gap-3 lg:gap-2">
+            <span className="material-icons-outlined text-[#0C098C] text-xl mt-0.5 flex-shrink-0 lg:mt-0.5 mt-0">
               location_on
             </span>
             <div className="flex flex-col gap-2 sm:gap-3">
@@ -33,8 +33,8 @@ function Footer() {
           </div>
 
           {/* Contact us */}
-          <div className="flex gap-2 max-lg:flex-col max-lg:items-center max-lg:gap-3">
-            <span className="material-icons-outlined text-[#0C098C] text-xl mt-0.5 flex-shrink-0 max-lg:mt-0">
+          <div className="flex gap-2 flex-col lg:flex-row items-center lg:items-start gap-3 lg:gap-2">
+            <span className="material-icons-outlined text-[#0C098C] text-xl mt-0.5 flex-shrink-0 lg:mt-0.5 mt-0">
               call_end
             </span>
             <div className="flex flex-col gap-2 sm:gap-3">
@@ -50,11 +50,11 @@ function Footer() {
         </div>
 
         {/* Services */}
-        <div className="flex flex-col gap-3 sm:gap-4 self-start max-lg:items-center">
+        <div className="flex flex-col gap-3 sm:gap-4 items-center lg:items-start lg:self-start">
           <h3 className="text-lg sm:text-xl font-semibold text-[#0C098C]">
             Services
           </h3>
-          <div className="flex flex-col gap-2 sm:gap-3 font-semibold max-lg:items-center">
+          <div className="flex flex-col gap-2 sm:gap-3 font-semibold items-center lg:items-start">
             <a
               href="#"
               className="text-xs sm:text-sm text-black transition-colors"
@@ -77,7 +77,7 @@ function Footer() {
         </div>
 
         {/* Ask Now */}
-        <div className="flex flex-col gap-3 sm:gap-4 items-start self-start max-lg:items-center">
+        <div className="flex flex-col gap-3 sm:gap-4 items-center lg:items-start lg:self-start">
           <h3 className="text-lg sm:text-xl font-semibold text-[#0C098C]">
             Ask Now
           </h3>
