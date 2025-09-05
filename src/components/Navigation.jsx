@@ -297,7 +297,7 @@ export default function Navigation({ isHome = false }) {
                   onClick={handleJabodetabekClick}
                 >
                   Jabodetabek
-                  <span className="text-black font-bold ml-2">></span>
+                  <span className="text-black font-bold ml-2">&gt;</span>
                 </div>
                 <div className="h-px bg-[#0C098C] w-full mt-3"></div>
               </div>
