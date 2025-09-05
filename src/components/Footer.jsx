@@ -6,7 +6,7 @@ function Footer() {
         <div className="flex flex-col gap-4 max-w-[200px] justify-center max-lg:items-center max-lg:max-w-none">
           <div className="flex items-center">
             <img
-              src="/favicon.png"
+              src="/favicon.webp"
               alt="CV Bejanaanugerah Logo"
               className="h-20 sm:h-24 w-auto"
             />
@@ -81,7 +81,12 @@ function Footer() {
           <h3 className="text-lg sm:text-xl font-semibold text-[#0C098C]">
             Ask Now
           </h3>
-          <a href="https://wa.me/6282110035871" target="_blank" rel="noopener noreferrer" className="transition-opacity">
+          <a
+            href="https://wa.me/6282110035871"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-opacity"
+          >
             <svg
               className="w-8 h-8 sm:w-10 sm:h-10 text-[#0C098C]"
               fill="currentColor"
