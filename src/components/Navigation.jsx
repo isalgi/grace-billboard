@@ -76,7 +76,7 @@ export default function Navigation({ isHome = false }) {
           top: rect.bottom + 8,
           left: rect.left,
         });
-        
+
         if (isRightColumnOpen) {
           setRightDropdownPosition({
             top: rect.bottom + 8,
@@ -111,13 +111,15 @@ export default function Navigation({ isHome = false }) {
   return (
     <>
       <nav
-        className={`relative z-20 px-4 sm:px-6 lg:px-12 py-4 ${!isHome ? "bg-[#2682BB]" : ""}`}
+        className={`relative z-20 px-4 sm:px-6 lg:px-12 py-4 ${
+          !isHome ? "bg-[#2682BB]" : ""
+        }`}
       >
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src="/favicon.png"
+              src="/favicon.webp"
               alt="CV Bejanaanugerah Logo"
               className="h-16 sm:h-20 w-auto"
             />
@@ -166,14 +168,19 @@ export default function Navigation({ isHome = false }) {
 
           <div className="flex items-center space-x-4">
             {/* Contact Button - Hidden on small screens */}
-            <a href="https://wa.me/6282110035871" target="_blank" rel="noopener noreferrer" className="hidden sm:block">
+            <a
+              href="https://wa.me/6282110035871"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:block"
+            >
               <button className="bg-[#0C098C] text-white px-4 sm:px-8 py-2 rounded transition-colors font-medium cursor-pointer text-sm sm:text-base">
                 Kontak Kami
               </button>
             </a>
 
             {/* Mobile menu button */}
-            <button 
+            <button
               className="md:hidden text-white"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
@@ -207,15 +214,15 @@ export default function Navigation({ isHome = false }) {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-[#2682BB] border-t border-blue-500">
             <div className="px-6 py-4 space-y-4">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className="block text-white font-medium py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Beranda
               </Link>
-              <Link 
-                to="/artikel" 
+              <Link
+                to="/artikel"
                 className="block text-white font-medium py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -224,36 +231,36 @@ export default function Navigation({ isHome = false }) {
               <div className="py-2">
                 <div className="text-white font-medium mb-2">Layanan</div>
                 <div className="ml-4 space-y-2">
-                  <Link 
-                    to="/lokasi/perintis-kemerdekaan" 
+                  <Link
+                    to="/lokasi/perintis-kemerdekaan"
                     className="block text-white text-sm py-1"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Jl. Perintis Kemerdekaan
                   </Link>
-                  <Link 
-                    to="/lokasi/cempaka-putih" 
+                  <Link
+                    to="/lokasi/cempaka-putih"
                     className="block text-white text-sm py-1"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Jl. Ahmad Yani Cempaka Putih
                   </Link>
-                  <Link 
-                    to="/lokasi/matraman-raya" 
+                  <Link
+                    to="/lokasi/matraman-raya"
                     className="block text-white text-sm py-1"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Jl. Matraman Raya
                   </Link>
-                  <Link 
-                    to="/lokasi/bekasi-pulogadung" 
+                  <Link
+                    to="/lokasi/bekasi-pulogadung"
                     className="block text-white text-sm py-1"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Jl. Raya Bekasi Pulo Gadung
                   </Link>
-                  <Link 
-                    to="/lokasi/kebon-kacang-raya" 
+                  <Link
+                    to="/lokasi/kebon-kacang-raya"
                     className="block text-white text-sm py-1"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -261,8 +268,8 @@ export default function Navigation({ isHome = false }) {
                   </Link>
                 </div>
               </div>
-              <a 
-                href="#kontak" 
+              <a
+                href="#kontak"
                 className="block text-white font-medium py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
