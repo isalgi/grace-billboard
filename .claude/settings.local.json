@@ -10,7 +10,12 @@
       "Read(/C:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\src\\components/**)",
       "Read(/C:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\src\\components/**)",
       "Read(/C:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\src\\components/**)",
-      "Read(/C:\\Users\\faish\\Documents\\dev-domain\\grace-billboard/**)"
+      "Read(/C:\\Users\\faish\\Documents\\dev-domain\\grace-billboard/**)",
+      "Read(/C:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\src\\pages/**)",
+      "Read(/C:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\src\\pages/**)",
+      "Read(/C:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\src\\pages/**)",
+      "Read(/C:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\src\\pages/**)",
+      "Read(/C:\\Users\\faish\\Documents\\dev-domain\\grace-billboard\\src\\pages/**)"
     ],
     "deny": [],
     "ask": []

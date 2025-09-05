@@ -12,35 +12,35 @@ function ServicesSection() {
       image: image02,
       title: "Jl. Perintis\nKemerdekaan",
       description:
-        "Berada di jalan protokol (Protokol B), dapat hilir Taman/Makarta cabang Kemayoran Jakarta Pusat sebesar kurang lebih 4KM, dekat dengan Mall Bola, Plaza Kuning, Komplex Jakarta Trade Center, menuju Kelapa Gading area ramai lainnya. View dari arah Cemara Pulih/Kelapa Gading menuju Priok.",
+        "Berada di jalan protokol (Protokol B), depan Halte TransJakarta \"Perintis Kemerdekaan\", terletak di seberang kampus ASMI, dekat dengan Mall Bella Terra; Konro Karebosi; Pallubasa Serigala; serta area ramai lainnya. View dari arah Cempaka Putih menuju Kelapa Gading/Pulo Gadung",
       link: "/lokasi/perintis-kemerdekaan",
     },
     {
       image: image01,
       title: "Jl. Ahmad Yani\nCempaka Putih",
       description:
-        "Billboard berada di jalan protokol (Protokol A), berada service di dekat dengan PD. Pasar Senen, Gedung Bappenas, dekat dengan Gedung Garmin, Universitas Jayabaya, PTC (Thamrinplaza Trade Center), pool B bis besar AKAR, area transito industri dan perdagangan, menuju ke banyak pusat stasium pusat Induk garut Senen. View dari arah Cemara Pulih/Kelapa Gading Tanjung Priok.",
+        "Billboard berada di jalan protokol (Protokol A), berada persis di dekat Halte TransJakarta \"Pulo Mas Bypass\", dekat dengan Gudang Garam; Universitas Jayabaya; dan area ramai lainnya. Billboard bisa terlihat dari jalan arteri ataupun jalan tol (view atas). View dari arah Rawamangun/Pramuka menuju Cempaka Putih/Kelapa Gading/Tanjung Priok.",
       link: "/lokasi/cempaka-putih",
     },
     {
       image: image03,
       title: "Jl. Matraman Raya",
       description:
-        "Jl. Teritikad persisi di depan Soto Dunia Mas (Matraman), dekat dengan Mall Jakarta Kampung Jakarta, Kelurahan Utan Kayu Selatan, Kelurahan Utan Kayu Utara, Gramedia Matraman, Pasar Statium, dll. area pusat keramaian dan perkantoran. Memiliki kedataan pejalan jalan/kampung Melayu menuju Saldmbaya/Pumangi/Senen.",
+        "Berada di jalan protokol (Protokol B). Terletak persis di depan Sop Djanda Khas Maranggi, dekat dengan Munik Resto; Hotel Holiday Inn; Gramedia Matraman; Pasar; Stasiun; dan area pusat keramaian lainnya. Arah pandang dari arah Jatinegara/Kampung Melayu menuju Salemba/Pramuka/Senen.",
       link: "/lokasi/matraman-raya",
     },
     {
       image: image07,
       title: "Jl. Raya Bekasi\n Pulo Gadung",
       description:
-        "Terletak di tempat strategis, dekat dengan Mall PTC (Pulogadung Trade Center), pool B bis besar AKAR, area kawasan industri dan perdagangan, menuju ke banyak pusat ekonomi lainnya. View dari arah Cakung/Derzpen Induk menuju Senen/Gambir/Pramoedya HI menuju Kota Tanah Abang.",
+        "Terletak di tempat strategis, dekat dengan Mall PTC (Pulogadung Trade Centre), pool & PO bus AKAP, area kawasan industri dan perkantoran, SPBU, Pasar Pulo Gadung, serta area pusat keramaian lainnya. View dari arah Cakung/Harapan Indah menuju Pulo Gadung/Kelapa Gading/Perintis Kemerdekaan.",
       link: "/lokasi/bekasi-pulogadung",
     },
     {
       image: image04,
       title: "Jl. Kebon Kacang Raya",
       description:
-        "Billboard berada di dekat jantung kota Jakarta Pusat. Terletak di Mall Plaza Indonesia, Mall Grand Indonesia. Dekat perkantoran & swalayan menuju ke Senen/Tanah Abang HI menuju Kota/Muanyar/Tanah Abang.",
+        "Billboard berada di dekat jantung kota Jakarta Pusat. Terletak di dekat Thamrin City; Mall Grand Indonesia, Mall Plaza Indonesia, area perkantoran & perhotelan, serta area prestise lainnya. View dari arah Thamrin/Bundaran HI menuju Mas Mansyur/Tanah Abang.",
       link: "/lokasi/kebon-kacang-raya",
     },
   ];

@@ -60,10 +60,10 @@ function BekasiPulogadungPage() {
   return (
     <LocationPage
       title="Jl. Raya Bekasi Pulo Gadung"
-      description="Berada di jalan protokol (Protokol B), depan Halte TransJakarta 'Perintis 
-      Kemerdekaan', terletak di seberang kampus ASMI, dekat dengan Mall Bella Terra; 
-      Konro Karebosi; Pallubasa Serigala; serta area ramai lainnya. View dari arah 
-      Cempaka Putih menuju Kelapa Gading/Pulo Gadung."
+      description="Terletak di tempat strategis, dekat dengan Mall PTC (Pulogadung Trade Centre), 
+      pool & PO bus AKAP, area kawasan industri dan perkantoran, SPBU, Pasar Pulo Gadung, 
+      serta area pusat keramaian lainnya. View dari arah Cakung/Harapan Indah menuju Pulo 
+      Gadung/Kelapa Gading/Perintis Kemerdekaan."
       mainImage={mainImageSrc}
       carouselMainImage=""
       additionalImages={additionalImages}

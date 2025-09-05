@@ -60,10 +60,10 @@ function KebonKacangRayaPage() {
   return (
     <LocationPage
       title="Jl. Kebon Kacang Raya"
-      description="Berada di jalan protokol (Protokol B), depan Halte TransJakarta 'Perintis 
-      Kemerdekaan', terletak di seberang kampus ASMI, dekat dengan Mall Bella Terra; 
-      Konro Karebosi; Pallubasa Serigala; serta area ramai lainnya. View dari arah 
-      Cempaka Putih menuju Kelapa Gading/Pulo Gadung."
+      description="Billboard berada di dekat jantung kota Jakarta Pusat. Terletak di dekat 
+      Thamrin City; Mall Grand Indonesia, Mall Plaza Indonesia, area perkantoran & 
+      perhotelan, serta area prestise lainnya. View dari arah Thamrin/Bundaran HI 
+      menuju Mas Mansyur/Tanah Abang."
       mainImage={mainImageSrc}
       carouselMainImage=""
       additionalImages={additionalImages}

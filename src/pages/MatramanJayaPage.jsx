@@ -60,10 +60,10 @@ function MatramanJayaPage() {
   return (
     <LocationPage
       title="Jl. Matraman Raya"
-      description="Berada di jalan protokol (Protokol B), depan Halte TransJakarta 'Perintis 
-      Kemerdekaan', terletak di seberang kampus ASMI, dekat dengan Mall Bella Terra; 
-      Konro Karebosi; Pallubasa Serigala; serta area ramai lainnya. View dari arah 
-      Cempaka Putih menuju Kelapa Gading/Pulo Gadung."
+      description="Berada di jalan protokol (Protokol B). Terletak persis di depan Sop Djanda Khas 
+      Maranggi, dekat dengan Munik Resto; Hotel Holiday Inn; Gramedia Matraman; Pasar; 
+      Stasiun; dan area pusat keramaian lainnya. Arah pandang dari arah Jatinegara/Kampung 
+      Melayu menuju Salemba/Pramuka/Senen."
       mainImage={mainImageSrc}
       carouselMainImage=""
       additionalImages={additionalImages}
